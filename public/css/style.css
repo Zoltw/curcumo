@@ -119,13 +119,12 @@ input {
         font-size: 40px;
         border-radius: 30px;
     }
+    .sign-description {
+        font-size: 72px;
+    }
 
     form {
         margin: auto;
-    }
-
-    .sign-description {
-        font-size: 72px;
     }
 
     input {
