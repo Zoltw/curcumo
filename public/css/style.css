@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     overflow: scroll;
 }
 
@@ -13,16 +14,24 @@ body {
     src: url(../fonts/Dongle-Regular.ttf);
 }
 
+@font-face {
+    font-family: AlumniSans-Bold;
+    src: url(../fonts/AlumniSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: AlumniSans-Medium;
+    src: url(../fonts/AlumniSans-Medium.ttf);
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     background: #FBBB04;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .logo-start {
@@ -48,6 +57,10 @@ body {
 
 .login-container {
     width: 100%;
+}
+
+.logo-get-container {
+    margin-top: 2em;
 }
 
 .login-description {
@@ -85,9 +98,42 @@ body {
     box-shadow: inset 0px 7px 6px rgba(0, 0, 0, 0.25);
 }
 
-.logo-get-container {
+.description-container {
+    display: flex;
+    margin-top: 3em;
+}
 
-    
+.start-page-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.start-page-description {
+    font-family: AlumniSans-Medium;
+    font-size: 160%;
+    margin-right: 2em;
+}
+
+.start-page-plan {
+    margin-bottom: 3em;
+}
+
+.start-page-plan-icon {
+    margin-bottom: 1.8em;
+}
+
+.start-page-shop {
+    margin-bottom: 3em;
+}
+
+.start-page-shop-icon {
+    margin-bottom: 1.8em;
+}
+
+.start-page-cook {
+    margin-bottom: 3em;
 }
 
 .page-container-s {
@@ -112,6 +158,7 @@ body {
     margin-top: 1em;
 }
 
+
 form.login {
     height: 100%;
     display: flex;
@@ -119,7 +166,20 @@ form.login {
     justify-content: center;
     align-items: center;
     margin: 0 3em;
+}
 
+button.contact-button {
+    border-radius: 20px;
+    background: #4F4537;
+    color: #FFFFFF;
+    font-family: 'Dongle';
+    font-size: 200%;
+    font-weight: 400;
+    border: none;
+    line-height: 1.8em;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    width: 4em;
+    margin-bottom: 0.5em;
 }
 
 button.login {
@@ -148,7 +208,6 @@ button.start {
     border-radius: 20px;
 }
 
-
 input {
     width: 55%;
     font-family: 'Dongle';
@@ -162,7 +221,6 @@ input {
     line-height: 1.8em;
     margin-bottom: 1.6em;
     padding: 0 0.7em;
-
 }
 
 div a {
@@ -170,7 +228,8 @@ div a {
     text-decoration: none;
     margin-left: 0.5em;
 }
-/*text-decoration*/ /*overflow (mobile)*/ /*padding*/
+
+
 @media only screen and (max-device-width: 450px) {
     .page-container {
         width: 85%;
@@ -200,6 +259,69 @@ div a {
         margin-top: 0;
     }
 
+    .logo-start {
+    }
+
+    .logo-get-container {
+        transform: scale(1.7);
+        margin-bottom: 9em;
+    }
+
+    button.start {
+        font-size: 200%;
+        width: 40%;
+        border-radius: 25px;
+    }
+
+    .start-page-container {
+        width: 85%;
+        height: 60%;
+        border-radius: 70px;
+        box-shadow: none;
+        align-items: normal;
+    }
+
+    .start-page-icons {
+        transform: scale(1.4);
+        margin-right: 3em;
+        margin-left: 2em;
+    }
+
+    .start-page-plan-icon {
+        margin-top: 9em;
+    }
+
+    .start-page-shop-icon {
+        margin-top: 6em;
+    }
+
+    .start-page-cook-icon {
+        margin-top: 6em;
+    }
+
+    .start-page-description {
+        margin-right: 0;
+        margin-left: 1.5em;
+    }
+
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
+        font-size: 160%;
+    }
+
+    .start-page-plan {
+        font-size: 170%;
+    }
+
+    .start-page-shop {
+        font-size: 170%;
+    }
+
+    .start-page-cook {
+        font-size: 170%;
+    }
+
     form {
         margin: auto;
     }
@@ -210,7 +332,5 @@ div a {
 
     button {
         border-radius: 50px;
-    }
-
-    
+    }    
 }
