@@ -125,10 +125,11 @@ a.contact-button {
     font-family: 'Dongle';
     font-size: 200%;
     border: none;
-    line-height: 1.8em;
+    line-height: 1.6em;
     box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
-    width: 4em;
+    width: 4.5em;
     margin-bottom: 0.5em;
+    margin: 0 0.5em;
     display: flex;
     text-decoration: none;
     justify-content: center;
@@ -246,6 +247,139 @@ a.login {
     margin-left: 0.5em;
 }
 
+/*preferences (pref.html)*/
+
+.preferences-container {
+    width: 1020px;
+    height: 583px;
+    background: #FFF8EC;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.7px;
+    
+}
+
+.pref-description {
+    font-family: 'Doppio One';
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+    letter-spacing: 0.7px;
+}
+
+.choose-preference {
+    flex-direction: row;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dongle';
+}
+
+.sections {
+    display: flex;
+}
+
+.first-section {
+    display: flex;
+}
+
+.first-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.second-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.second-section {
+    display: flex;
+}
+
+.third-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.fourth-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.pref-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a.pref {
+    margin: 4em;
+    width: 50%;
+    font-family: 'Dongle';
+    font-size: 200%;
+    display: flex;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.8em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    letter-spacing: 0.7px;
+}
+
+.contact-button-container-pref {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+}
 
 @media only screen and (max-device-width: 450px) {
 
@@ -323,6 +457,7 @@ a.login {
         height: 60%;
         margin-top: 3em;
     }
+
     .login-description {
          width: 80%;
          font-size: 220%;
@@ -357,15 +492,60 @@ a.login {
         margin-top: 3em;
     }
 
+    /*pref-page*/
 
+    .preferences-container {
+        width: 85%;
+        height: 70%;
+        justify-content: space-between;
+    }
 
+    .pref-description {
+        font-size: 180%;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
 
+    .choose-preference {
+        transform: scale(2);
+        margin-bottom: 2em;
+    }
 
+    .sections {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 
+    .first-section {
+        margin-bottom: 2em;
+    }
 
+    .first-icon {
+        margin: 0.4em;
+    }
 
+    .second-icon {
+        margin: 0.4em;
+    }
 
+    .third-icon {
+        margin: 0.4em;
+    }
 
+    .fourth-icon {
+        margin: 0.4em;
+    }
 
+    a.pref {
+        font-size: 420%;
+        border-radius: 50px;
+        margin: 0 4em;
+        margin-bottom: 1.5em;
+    }
 
+    .contact-button-container-pref {
+        justify-content: center;
+        width: auto;
+        width: 95%;
+    }
 }
