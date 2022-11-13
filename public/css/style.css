@@ -34,6 +34,12 @@ body {
     align-items: center;
 }
 
+/*get-started-page (start.html)*/
+
+.logo-get-container {
+    margin-top: 2em;
+}
+
 .logo-start {
     transform: scale(1.1);
     margin-top: 2em;
@@ -47,44 +53,20 @@ body {
     align-items: center;
 }
 
-.logo {
-    margin: 2em;
+a.start {
+    width: 40%;
+    font-family: 'Dongle';
+    font-size: 200%;
     display: flex;
-    flex-direction: column;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.8em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
     justify-content: center;
-    align-items: center;
-}
-
-.login-container {
-    width: 100%;
-}
-
-.logo-get-container {
-    margin-top: 2em;
-}
-
-.login-description {
-    font-family: 'Doppio One';
-    font-size: 150%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.5em;
-}
-
-.page-container {
-    width: 768px;
-    height: 631px;
-    left: 336px;
-    top: 300px;
-    margin-bottom: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #FFEECB;
-    border-radius: 100px;
+    letter-spacing: 0.7px;
 }
 
 .start-page-container {
@@ -101,14 +83,8 @@ body {
 .description-container {
     display: flex;
     margin-top: 3em;
+    letter-spacing: 0.7px;
 }
-
-.start-page-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 
 .start-page-description {
     font-family: AlumniSans-Medium;
@@ -117,55 +93,29 @@ body {
 }
 
 .start-page-plan {
-    margin-bottom: 3em;
-}
-
-.start-page-plan-icon {
-    margin-bottom: 1.8em;
-}
+     margin-bottom: 3em;
+ }
 
 .start-page-shop {
     margin-bottom: 3em;
-}
-
-.start-page-shop-icon {
-    margin-bottom: 1.8em;
 }
 
 .start-page-cook {
     margin-bottom: 3em;
 }
 
-.page-container-s {
-    width: 768px;
-    height: 670px;
-    left: 336px;
-    top: 300px;
-    margin-bottom: auto;
+.start-page-icons {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    background: #FFEECB;
-    border-radius: 100px;
 }
 
-
-.sign-description {
-    height: 30%;
-    font-family: 'Dongle';
-    font-size: 130%;
-    margin-top: 1em;
+.start-page-plan-icon {
+    margin-bottom: 1.8em;
 }
 
-
-form.login {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 3em;
+.start-page-shop-icon {
+    margin-bottom: 1.8em;
 }
 
 a.contact-button {
@@ -174,7 +124,6 @@ a.contact-button {
     color: #FFFFFF;
     font-family: 'Dongle';
     font-size: 200%;
-    font-weight: 400;
     border: none;
     line-height: 1.8em;
     box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
@@ -185,33 +134,52 @@ a.contact-button {
     justify-content: center;
 }
 
-button.login {
-    width: 45%;
-    font-family: 'Dongle';
-    font-size: 180%;
-    font-weight: 400;
-    border: none;
-    color: #FFFFFF;
-    line-height: 1.8em;
-    background: #35A35C;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+/*login-page (login.html)*/
+
+.logo {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-a.start {
-    width: 40%;
-    font-family: 'Dongle';
-    font-size: 200%;
-    font-weight: 400;
+.page-container {
+    width: 768px;
+    height: 631px;
+    left: 336px;
+    top: 300px;
+    margin-bottom: auto;
     display: flex;
-    border: none;
-    color: #FFFFFF;
-    line-height: 1.8em;
-    background: #35A35C;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    text-decoration: none;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background: #FFEECB;
+    border-radius: 100px;
+    letter-spacing: 0.7px;
+}
+
+.login-description {
+    font-family: 'Doppio One';
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.login-container {
+    width: 100%;
+}
+
+form.login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3em;
 }
 
 input {
@@ -229,10 +197,24 @@ input {
     padding: 0 0.7em;
 }
 
-a.login {
-    color: #35A35C;
-    text-decoration: none;
-    margin-left: 0.5em;
+button.login {
+    width: 45%;
+    font-family: 'Dongle';
+    font-size: 180%;
+    font-weight: 400;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.8em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.sign-description {
+    height: 30%;
+    font-family: 'Dongle';
+    font-size: 130%;
+    margin-top: 1em;
 }
 
 a.sign {
@@ -241,48 +223,42 @@ a.sign {
     margin-left: 0.5em;
 }
 
+/*sign-page (sign.html)*/
+
+.page-container-sign {
+    width: 768px;
+    height: 670px;
+    left: 336px;
+    top: 300px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #FFEECB;
+    border-radius: 100px;
+    letter-spacing: 0.7px;
+}
+
+a.login {
+    color: #35A35C;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+
 
 @media only screen and (max-device-width: 450px) {
-    .page-container {
-        width: 85%;
-        height: 60%;
-        margin-top: 3em;
-    }
 
-    .page-container-s {
-        width: 85%;
-        height: 70%;
-        margin-top: 3em;
-    }
-
-    .login-description {
-        width: 80%;
-        font-size: 220%;
-        margin-top: 1em;
-    }
-
-    .login-container {
-        font-size: 40px;
-        width: 110%;
-
-    }
-    .sign-description {
-        font-size: 50px;
-        margin-top: 0;
-    }
-
-    .logo-start {
-    }
+    /*start-page*/
 
     .logo-get-container {
         transform: scale(1.7);
         margin-bottom: 9em;
     }
 
-    button.start {
-        font-size: 200%;
-        width: 40%;
-        border-radius: 25px;
+    a.start {
+        width: 45%;
+        font-size: 240%;
     }
 
     .start-page-container {
@@ -291,6 +267,23 @@ a.sign {
         border-radius: 70px;
         box-shadow: none;
         align-items: normal;
+    }
+
+    .start-page-description {
+        margin-right: 0;
+        margin-left: 1.5em;
+    }
+
+    .start-page-plan {
+        font-size: 170%;
+    }
+
+    .start-page-shop {
+        font-size: 170%;
+    }
+
+    .start-page-cook {
+        font-size: 170%;
     }
 
     .start-page-icons {
@@ -311,9 +304,9 @@ a.sign {
         margin-top: 6em;
     }
 
-    .start-page-description {
-        margin-right: 0;
-        margin-left: 1.5em;
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
     }
 
     a.contact-button {
@@ -323,26 +316,22 @@ a.sign {
         width: 25%;
     }
 
-    a.start {
-        width: 45%;
-        font-size: 240%;
+    /*login-page*/
+
+    .page-container {
+        width: 85%;
+        height: 60%;
+        margin-top: 3em;
+    }
+    .login-description {
+         width: 80%;
+         font-size: 220%;
+         margin-top: 1em;
     }
 
-    .contact-button-container {
-        display: flex;
-        justify-content: center;
-    }
-
-    .start-page-plan {
-        font-size: 170%;
-    }
-
-    .start-page-shop {
-        font-size: 170%;
-    }
-
-    .start-page-cook {
-        font-size: 170%;
+    .login-container {
+        font-size: 40px;
+        width: 110%;
     }
 
     form.login {
@@ -355,5 +344,28 @@ a.sign {
 
     button.login {
         border-radius: 50px;
-    }    
+    }
+
+    .sign-description {
+        font-size: 50px;
+        margin-top: 0;
+    }
+
+    .page-container-sign {
+        width: 85%;
+        height: 70%;
+        margin-top: 3em;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
