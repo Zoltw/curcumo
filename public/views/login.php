@@ -14,10 +14,18 @@
                 <h1>log in to curcumo</h1>
             </div>
             <div class="login-container">
-                <form class="login">
+                <form class="login" action="login" method="POST">
+                    <div class="messages">
+                        <?php if(isset($messages)) {
+                            foreach ($messages as $message) {
+                                echo $message;
+                            }
+                        }
+                        ?>
+                    </div>
                     <input name="email" type="text" placeholder="Email">
                     <input name="password" type="password" placeholder="Password">
-                    <button href="preferences" class="login">log in with email</button>
+                    <button type="submit" class="login">log in with email</button>
                 </form>
             </div>
             <div class="sign-description">

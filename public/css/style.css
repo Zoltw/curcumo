@@ -34,7 +34,7 @@ body {
     align-items: center;
 }
 
-/*get-started-page (start.html)*/
+/*get-started-page (start.php)*/
 
 .logo-get-container {
     margin-top: 2em;
@@ -135,7 +135,7 @@ a.contact-button {
     justify-content: center;
 }
 
-/*login-page (login.html)*/
+/*login-page (login.php)*/
 
 .logo {
     margin: 2em;
@@ -224,7 +224,7 @@ a.sign {
     margin-left: 0.5em;
 }
 
-/*sign-page (sign.html)*/
+/*sign-page (sign.php)*/
 
 .page-container-sign {
     width: 768px;
@@ -247,7 +247,7 @@ a.login {
     margin-left: 0.5em;
 }
 
-/*preferences (pref.html)*/
+/*preferences (pref.php)*/
 
 .preferences-container {
     width: 1020px;

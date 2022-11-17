@@ -11,4 +11,6 @@ Router::get('signup', 'DefaultController');
 Router::get('preferences', 'DefaultController');
 Router::get('preferences_sec', 'DefaultController');
 
+Router::post('login', 'SecurityController');
+
 Router::run($path);
