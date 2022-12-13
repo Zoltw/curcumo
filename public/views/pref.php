@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="pref-button">
-            <a href="preferences_sec" class="pref">next</a>
+            <a href="pref_second" class="pref">next</a>
         </div>
     </div>
     <div class="contact-button-container-pref">

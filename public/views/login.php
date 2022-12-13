@@ -15,7 +15,7 @@
             </div>
             <div class="login-container">
                 <form class="login" action="login" method="POST">
-                    <div class="messages">
+                    <div class="message">
                         <?php if(isset($messages)) {
                             foreach ($messages as $message) {
                                 echo $message;
@@ -29,7 +29,7 @@
                 </form>
             </div>
             <div class="sign-description">
-                <h2>New to curcumo? <a href="signup" class="sign">Sign up</a></h2>
+                <h2>New to curcumo? <a href="sign" class="sign">Sign up</a></h2>
             </div>
         </div>
     </div>
