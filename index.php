@@ -10,6 +10,9 @@ Router::get('login', 'DefaultController');
 Router::get('sign', 'DefaultController');
 Router::get('pref', 'DefaultController');
 Router::get('pref_second', 'DefaultController');
+Router::get('list', 'DefaultController');
+Router::get('meal', 'DefaultController');
+Router::get('plan', 'DefaultController');
 Router::post('login', 'SecurityController');
 
 Router::run($path);

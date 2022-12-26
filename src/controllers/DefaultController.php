@@ -20,7 +20,20 @@ class DefaultController extends AppController {
         $this->render('pref');
     }
 
-    public function pref_second() {
-        $this->render('pref_second');
+    public function pref_sec() {
+        $this->render('pref-second');
     }
+
+    public function list() {
+        $this->render('list');
+    }
+
+    public function meal() {
+        $this->render('meal');
+    }
+
+    public function plan() {
+        $this->render('plan');
+    }
+
 }
