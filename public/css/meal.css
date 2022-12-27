@@ -3,29 +3,34 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
     /* padding: 2em; */
-    margin-top: 2em;
+    margin: 2em 0;
+    padding: 0 1em 1em 1em;
     overflow: auto;
 }
 
 .meals-container>div>img {
-    height: 50%;
+    height: 59%;
     width: 100%;
     object-fit: cover;
     border-radius: 2em 2em 0 0;
 }
 
 .meals-container>div>div {
-    height: 20%;
-    margin: 1em;
+    height: 40%;
+    margin: 0 1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .meals-container>div {
-    border: 1px solid gray;
-    border-radius: 2em 2em 0 0;
+    background: #FFF8EC;
+    border-radius: 2em;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     height: 400px;
+    font-family: 'Dongle';
+    font-size: 120%;
+    margin-bottom: 1em; 
+    letter-spacing: 0.7px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

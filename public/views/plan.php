@@ -36,71 +36,70 @@
         <div id="meal-1">
             <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
-
+                <h2>Pesto tagiatelle</h2>
+                <div>
+                    <img src="public/img/clock-icon.svg" alt="">
+                    <h3>40 min</h3>
+                </div>
             </div>
 
         </div>
         <div id="meal-2">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/pumpkin-soup.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Pumpking soup</h2>
                 
             </div>
             
         </div>
         <div id="meal-3">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/butter-chicken.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Butter chicken with rice</h2>
                 
             </div>
             
         </div>
         <div id="meal-4">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/irish-pancakes.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Irish Pancakes</h2>
                 
             </div>
             
         </div>
         <div id="meal-5">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/turkish-eggs.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Cilibir - turkish eggs</h2>
                 
             </div>
         
         </div>
         <div id="meal-6">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/panini-with-prosciutto.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Panini with prosciutto</h2>
                 
             </div>
             
         </div>
         <div id="meal-7">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/chocolate-cake.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Chocolate cake</h2>
                 
             </div>
         
         </div>
         <div id="meal-8">
-            <img src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img src="public/img/meal-images/shakshuka.jpg" alt="">
             <div>
-                <h1>Pesto tagiatelle</h1>
+                <h2>Shakshuka</h2>
                 
             </div>
         
         </div>
     </section>
-    <div class="contact-button-container-pref">
-        <a class="contact-button">Contact us</a>
-        <a class="contact-button">Report a bug</a>
-    </div>
 </div>
-</body>
+</body> 
