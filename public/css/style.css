@@ -384,8 +384,8 @@ a.pref {
 /* plan page */
 
 .plan-page-container {
-    width: 1062px;
-    height: 158px;
+    width: 70%;
+    height: 12rem;
     
     background: #FFF8EC;
     opacity: 0.9;
@@ -409,6 +409,68 @@ a.pref {
 
 .cook-icon {
     transform: scale(0.5);
+    opacity: 0.25;
+}
+
+.draw-meal {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+a.draw-button {
+    border-radius: 20px;
+    background: #4F4537;
+    color: #FFFFFF;
+    font-family: 'Dongle';
+    font-size: 200%;
+    border: none;
+    line-height: 1.6em;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    width: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.draw-description {
+    font-family: 'Doppio One';
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em; 
+    letter-spacing: 0.7px;
+}
+
+.draw-button-container {
+    /* margin-right: auto;
+    margin-left: calc(50% - 1rem);
+    margin-right: calc(50% - 1rem); */
+}
+
+.plate-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: calc(40% + 2.5rem);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.plate-icons {
+    margin-left: 1.5rem;
+}
+
+.icon {
+
+}
+
+.icon2 {
+    opacity: 0.25;
+}
+
+.icon3 {
     opacity: 0.25;
 }
 
