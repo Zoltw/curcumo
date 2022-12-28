@@ -20,6 +20,7 @@
     <div class="plan-page-container">
         <div class="draw-description">
             <h1>Plan your meals</h1>
+            <img class="user-icon-mobile" src="public/img/user-icon.svg" alt="">
         </div>
         <div class="plate-container">
             <div class="plate-icons">

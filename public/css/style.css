@@ -452,9 +452,12 @@ a.draw-button {
 .plate-container {
     display: flex;
     justify-content: space-between;
-    margin-right: calc(40% + 3.5rem);
     margin-bottom: 1rem;
     position: relative;
+}
+
+.draw-button-container {
+    margin-right: calc(45%);
 }
 
 .plate-icons {
@@ -469,6 +472,15 @@ a.draw-button {
     opacity: 0.25;
 }
 
+img.user-icon-mobile {
+    display: none;
+}
+
+@media only screen and (max-device-width: 940px) {
+    .user-icon {
+        padding-left: 3rem;
+    }
+}
 
 @media only screen and (max-device-width: 450px) {
 
@@ -636,5 +648,48 @@ a.draw-button {
         justify-content: center;
         width: auto;
         width: 95%;
+    }
+
+    /* plan-page */
+
+    .plan-page-container {
+        background: none;
+        box-shadow: none;
+        border-radius: none;
+    }
+
+    .psc-icons {
+        display: none;
+    }
+
+    .user-icon {
+        display: none;
+    }
+
+    img.user-icon-mobile {
+        display: flex;
+        transform: scale(1.7);
+        margin-left: 6em;
+    }
+
+    .plate-icons {
+        margin-left: 0;
+        transform: scale(1.5);
+    }
+
+    .draw-button-container {
+        margin-right: calc(34%);
+        font-size: 150%;
+    }
+
+    .draw-description {
+        font-size: 160%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .plate-container {
+        align-items: center;
     }
 }
