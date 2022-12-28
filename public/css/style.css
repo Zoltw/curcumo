@@ -424,13 +424,6 @@ a.pref {
     opacity: 0.25;
 }
 
-.draw-meal {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-}
-
 a.draw-button {
     border-radius: 20px;
     background: #4F4537;
@@ -456,12 +449,6 @@ a.draw-button {
     letter-spacing: 0.7px;
 }
 
-.draw-button-container {
-    /* margin-right: auto;
-    margin-left: calc(50% - 1rem);
-    margin-right: calc(50% - 1rem); */
-}
-
 .plate-container {
     display: flex;
     justify-content: space-between;
@@ -472,10 +459,6 @@ a.draw-button {
 
 .plate-icons {
     margin-left: 1.5rem;
-}
-
-.icon {
-
 }
 
 .icon2 {
