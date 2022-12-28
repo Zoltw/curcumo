@@ -2,25 +2,69 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
-    /* padding: 2em; */
     margin: 2em 0;
     padding: 0 1em 1em 1em;
     overflow: auto;
 }
 
-.meals-container>div>img {
-    height: 59%;
+.meals-container>div>.meal-img {
+    height: 65%;
     width: 100%;
     object-fit: cover;
     border-radius: 2em 2em 0 0;
 }
 
-.meals-container>div>div {
-    height: 40%;
-    margin: 0 1em;
+.meals-container>div>.time-prepare {
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meals-container>div>.meal-description {
+    height: 10%;
+    font-size: 130%;
+    margin-left: 0.8em;
     display: flex;
     flex-direction: column;
 }
+
+.meals-container>div>.meal-description>h2 {
+    margin: 0;
+}
+
+.meals-container>div>div>.property-meal {
+    display: flex;
+    align-items: center;
+}
+
+.meals-container>div>div>.add-cont {
+    display: flex;
+    align-items: center;
+}
+
+.meals-container>div>div>div>.clock-icon {
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+.meals-container>div>div>div>.mini-icon {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+.meals-container>div>div>.addButton {
+    background: #35A35C;
+    box-shadow: 0px 2.2117px 4.4234px rgba(0, 0, 0, 0.25);
+    border-radius: 22.117px;
+
+}
+
 
 .meals-container>div {
     background: #FFF8EC;
@@ -33,5 +77,45 @@ section {
     letter-spacing: 0.7px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.time-prepare {
+    display: flex;
+}
+
+a.addButton {
+    font-family: 'Dongle';
+    font-size: 130%;
+    width: 8rem;
+    margin-right: 2rem;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #35A35C;
+    box-shadow: 0px 2.2117px 4.4234px rgb(0 0 0 / 25%);
+    border-radius: 2rem;
+    justify-content: center;
+}
+
+@media only screen and (max-device-width: 450px) {
+    section {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 5rem;
+    }
+
+    .meals-container>div {
+        height: 470px;
+        font-size: 170%;
+    }
+
+    .meals-container>div>.time-prepare {
+        font-size: 120%;
+    }
+
+    a.addButton {
+        width: 14rem;
+        height: 4rem;
+    }
 }
