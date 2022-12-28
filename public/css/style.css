@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    padding: 0;
+    overflow: scroll;
 }
 
 @font-face {
@@ -12,17 +14,128 @@ body {
     src: url(../fonts/Dongle-Regular.ttf);
 }
 
+@font-face {
+    font-family: AlumniSans-Bold;
+    src: url(../fonts/AlumniSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: AlumniSans-Medium;
+    src: url(../fonts/AlumniSans-Medium.ttf);
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     background: #FBBB04;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
+
+/*get-started-page (start.php)*/
+
+.logo-get-container {
+    margin-top: 2em;
+}
+
+.logo-start {
+    transform: scale(1.1);
+    margin-top: 2em;
+}
+
+.logo-start-button {
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a.start {
+    width: 40%;
+    font-family: 'Dongle';
+    font-size: 200%;
+    display: flex;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.8em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    letter-spacing: 0.7px;
+}
+
+.start-page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #FFEECB;
+    box-shadow: inset 0px 7px 6px rgba(0, 0, 0, 0.25);
+}
+
+.description-container {
+    display: flex;
+    margin-top: 3em;
+    letter-spacing: 0.7px;
+}
+
+.start-page-description {
+    font-family: AlumniSans-Medium;
+    font-size: 160%;
+    margin-right: 2em;
+}
+
+.start-page-plan {
+     margin-bottom: 3em;
+ }
+
+.start-page-shop {
+    margin-bottom: 3em;
+}
+
+.start-page-cook {
+    margin-bottom: 3em;
+}
+
+.start-page-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-page-plan-icon {
+    margin-bottom: 1.8em;
+}
+
+.start-page-shop-icon {
+    margin-bottom: 1.8em;
+}
+
+a.contact-button {
+    border-radius: 20px;
+    background: #4F4537;
+    color: #FFFFFF;
+    font-family: 'Dongle';
+    font-size: 200%;
+    border: none;
+    line-height: 1.6em;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    width: 4.5em;
+    margin-bottom: 0.5em;
+    margin: 0 0.5em;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+/*login-page (login.php)*/
 
 .logo {
     margin: 2em;
@@ -30,17 +143,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-.login-description {
-    font-family: 'Doppio One';
-    font-size: 310%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.5em;
 }
 
 .page-container {
@@ -55,39 +157,34 @@ body {
     align-items: center;
     background: #FFEECB;
     border-radius: 100px;
+    letter-spacing: 0.7px;
 }
 
-.sign-description {
-    height: 30%;
-    font-family: 'Dongle';
-    font-size: 200%;
+.login-description {
+    font-family: 'Doppio One';
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
 }
 
-form {
+.login-container {
+    width: 100%;
+}
+
+form.login {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-
-button {
-    width: 100%;
-    font-family: 'Dongle';
-    font-size: 180%;
-    font-weight: 400;
-    border: none;
-    color: #FFFFFF;
-    margin: 1.2em;
-    line-height: 1.8em;
-    background: #35A35C;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    margin: 0 3em;
 }
 
 input {
-    width: 160%;
+    width: 55%;
     font-family: 'Dongle';
     font-size: 180%;
     font-weight: 400;
@@ -97,42 +194,463 @@ input {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     line-height: 1.8em;
-    margin: 0.7em;
+    margin-bottom: 1.6em;
+    padding: 0 0.7em;
+}
+
+button.login {
+    width: 45%;
+    font-family: 'Dongle';
+    font-size: 180%;
+    font-weight: 400;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.8em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.sign-description {
+    height: 30%;
+    font-family: 'Dongle';
+    font-size: 130%;
+    margin-top: 1em;
+}
+
+a.sign {
+    color: #35A35C;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+
+/*sign-page (sign.php)*/
+
+.page-container-sign {
+    width: 768px;
+    height: 670px;
+    left: 336px;
+    top: 300px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #FFEECB;
+    border-radius: 100px;
+    letter-spacing: 0.7px;
+}
+
+a.login {
+    color: #35A35C;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+
+/*preferences (pref.php)*/
+
+.preferences-container {
+    width: 1020px;
+    height: 583px;
+    background: #FFF8EC;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.7px;
+    
+}
+
+.pref-description {
+    font-family: 'Doppio One';
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+    letter-spacing: 0.7px;
+}
+
+.choose-preference {
+    flex-direction: row;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dongle';
+}
+
+.sections {
+    display: flex;
+}
+
+.first-section {
+    display: flex;
+}
+
+.first-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.second-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.second-section {
+    display: flex;
+}
+
+.third-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.fourth-icon {
+    width: 165px;
+    height: 170px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.24658px 4.24658px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    font-size: 200%;
+}
+
+.pref-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a.pref {
+    margin: 4em;
+    width: 50%;
+    font-family: 'Dongle';
+    font-size: 200%;
+    display: flex;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.8em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    letter-spacing: 0.7px;
+}
+
+.contact-button-container-pref {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+}
+
+/* plan page */
+
+.plan-page-container {
+    width: 80%;
+    height: 12rem;
+    
+    background: #FFF8EC;
+    opacity: 0.9;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 22px;
+}
+
+.psc-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.user-icon {
+    transform: scale(1.4);
+    padding-left: calc(50%);
+}
+
+.psc-user-container {
+    display: flex;
+    align-items: center;
+}
+
+.plan-icon {
+    transform: scale(0.5);
+}
+
+.shop-icon {
+    transform: scale(0.5);
+    opacity: 0.25;
+}
+
+.cook-icon {
+    transform: scale(0.5);
+    opacity: 0.25;
+}
+
+.draw-meal {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+a.draw-button {
+    border-radius: 20px;
+    background: #4F4537;
+    color: #FFFFFF;
+    font-family: 'Dongle';
+    font-size: 200%;
+    border: none;
+    line-height: 1.6em;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    width: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.draw-description {
+    font-family: 'Doppio One';
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em; 
+    letter-spacing: 0.7px;
+}
+
+.draw-button-container {
+    /* margin-right: auto;
+    margin-left: calc(50% - 1rem);
+    margin-right: calc(50% - 1rem); */
+}
+
+.plate-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: calc(40% + 3.5rem);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.plate-icons {
+    margin-left: 1.5rem;
+}
+
+.icon {
 
 }
 
+.icon2 {
+    opacity: 0.25;
+}
+
+.icon3 {
+    opacity: 0.25;
+}
+
 @media only screen and (max-device-width: 450px) {
+
+    /*start-page*/
+
+    .logo-get-container {
+        transform: scale(1.7);
+        margin-bottom: 9em;
+    }
+
+    a.start {
+        width: 45%;
+        font-size: 240%;
+    }
+
+    .start-page-container {
+        width: 85%;
+        height: 60%;
+        border-radius: 70px;
+        box-shadow: none;
+        align-items: normal;
+    }
+
+    .start-page-description {
+        margin-right: 0;
+        margin-left: 1.5em;
+    }
+
+    .start-page-plan {
+        font-size: 170%;
+    }
+
+    .start-page-shop {
+        font-size: 170%;
+    }
+
+    .start-page-cook {
+        font-size: 170%;
+    }
+
+    .start-page-icons {
+        transform: scale(1.4);
+        margin-right: 3em;
+        margin-left: 2em;
+    }
+
+    .start-page-plan-icon {
+        margin-top: 9em;
+    }
+
+    .start-page-shop-icon {
+        margin-top: 6em;
+    }
+
+    .start-page-cook-icon {
+        margin-top: 6em;
+    }
+
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    a.contact-button {
+        display: flex;
+        justify-content: center;
+        font-size: 300%;
+        width: 25%;
+    }
+
+    /*login-page*/
+
     .page-container {
         width: 85%;
         height: 60%;
+        margin-top: 3em;
     }
 
     .login-description {
-        width: 80%;
-        font-size: 75px;
-        margin-bottom: 1.5em;
+         width: 80%;
+         font-size: 220%;
+         margin-top: 1em;
     }
 
     .login-container {
-        height: 50%;
-        width: 50%;
         font-size: 40px;
-        border-radius: 30px;
+        width: 110%;
     }
 
-    form {
-        margin: auto;
-    }
-
-    .sign-description {
-        font-size: 72px;
+    form.login {
+        margin: 0;
     }
 
     input {
         border-radius: 50px;
     }
 
-    button {
+    button.login {
         border-radius: 50px;
+    }
+
+    .sign-description {
+        font-size: 50px;
+        margin-top: 0;
+    }
+
+    .page-container-sign {
+        width: 85%;
+        height: 70%;
+        margin-top: 3em;
+    }
+
+    /*pref-page*/
+
+    .preferences-container {
+        width: 85%;
+        height: 70%;
+        justify-content: space-between;
+    }
+
+    .pref-description {
+        font-size: 180%;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .choose-preference {
+        transform: scale(2);
+        margin-bottom: 2em;
+    }
+
+    .sections {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .first-section {
+        margin-bottom: 2em;
+    }
+
+    .first-icon {
+        margin: 0.4em;
+    }
+
+    .second-icon {
+        margin: 0.4em;
+    }
+
+    .third-icon {
+        margin: 0.4em;
+    }
+
+    .fourth-icon {
+        margin: 0.4em;
+    }
+
+    a.pref {
+        font-size: 420%;
+        border-radius: 50px;
+        margin: 0 4em;
+        margin-bottom: 1.5em;
+    }
+
+    .contact-button-container-pref {
+        justify-content: center;
+        width: auto;
+        width: 95%;
     }
 }
