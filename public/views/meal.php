@@ -17,5 +17,23 @@
             <img src="public/img/user-icon.svg" alt="">
         </div>
     </div>
+    <section class="meals-container">
+        <div id="meal-1">
+            <img class="meal-img" src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <div class="meal-description">
+                <h2>Pesto tagiatelle</h2>
+            </div>
+            <div class="time-prepare">
+                <div class="property-meal">
+                    <img class="clock-icon" src="public/img/clock-icon.svg" alt="">
+                    <h3>40 min</h3>
+                </div>
+                <div class="add-cont">
+                    <img class="mini-icon" src="public/img/vegetarian-icon.svg" alt="">
+                    <a class="addButton">add to list</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 </body> 
