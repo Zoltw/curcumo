@@ -1,4 +1,4 @@
-section {
+.meals-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
@@ -20,7 +20,7 @@ section {
     justify-content: space-between;
 }
 
-.meals-container>div>.meal-description {
+.meals-container>div>.meal-title {
     height: 10%;
     font-size: 130%;
     margin-left: 0.8em;
@@ -97,6 +97,133 @@ a.addButton {
     box-shadow: 0px 2.2117px 4.4234px rgb(0 0 0 / 25%);
     border-radius: 2rem;
     justify-content: center;
+}
+
+
+/* meal-page */
+
+.meal-section {
+    margin: 2em 0;
+    padding: 0 1em 1em 1em;
+    overflow: auto;
+}
+
+.meal-section>div>.meal-img {
+    height: 30%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2em 2em 0 0;
+}
+
+.meal-section>div>div>.time-prepare {
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-section>div>div>.meal-title {
+    height: 10%;
+    font-size: 130%;
+    margin-left: 0.8em;
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-section>div>div>.meal-title>h2 {
+    margin: 0;
+}
+
+.meal-section>div>div>div>.property-meal {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.meal-section>div>div>p {
+    
+}
+
+.meal-section>div>div>div>.property-meal>h3 {
+    margin: 0 1rem 0 1rem;
+}
+
+.meal-section>div>div>div>.add-cont {
+    display: flex;
+    align-items: center;
+}
+
+.meal-section>div>div>div>div>.clock-icon {
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 1.5em;
+}
+
+.meal-section>div>div>div>div>.mini-icon {
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 2rem;
+}
+
+.meal-section>div>div>.addButton {
+    background: #35A35C;
+    box-shadow: 0px 2.2117px 4.4234px rgba(0, 0, 0, 0.25);
+    border-radius: 22.117px;
+
+}
+
+.meal-section>div {
+    background: #FFF8EC;
+    border-radius: 2em;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 1500px;
+    font-family: 'Dongle';
+    font-size: 200%;
+    margin-bottom: 1em; 
+    letter-spacing: 0.7px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.meal-section>div>div>div>.meal-descript {
+    font-size: 3.5rem;
+    display: flex;
+}
+
+.meal-section>div>div>div>.meal-descript>h2 {
+    margin: 1rem 1rem 0 0;
+}
+
+.meal-section>div>div>div>.border-top {
+    width: 380px;
+    height: 91px;
+    left: 816px;
+    top: 641px;
+    
+    border: 1px solid #ACACAC;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.meal-section>div>div>div>.border-bottom {
+    width: 380px;
+    height: 569px;
+    left: 816px;
+    top: 731px;
+    
+    border: 1px solid #ACACAC;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.meal-section>div>div {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.meal-section>div>div>.meal-products {
+    margin: 3rem;
 }
 
 @media only screen and (max-device-width: 450px) {
