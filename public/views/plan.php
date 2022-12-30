@@ -36,7 +36,7 @@
     <section class="meals-container">
         <div id="meal-1">
             <img class="meal-img" src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Pesto tagiatelle</h2>
             </div>
             <div class="time-prepare">
@@ -52,7 +52,7 @@
         </div>
         <div id="meal-2">
             <img class="meal-img" src="public/img/meal-images/pumpkin-soup.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Pumpkin soup</h2>
             </div>
             <div class="time-prepare">
@@ -68,7 +68,7 @@
         </div>
         <div id="meal-3">
             <img class="meal-img" src="public/img/meal-images/butter-chicken.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Butter chicken with rice</h2>
             </div>
             <div class="time-prepare">
@@ -83,7 +83,7 @@
         </div>
         <div id="meal-4">
             <img class="meal-img" src="public/img/meal-images/irish-pancakes.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Irish pancakes</h2>
             </div>
             <div class="time-prepare">
@@ -99,7 +99,7 @@
         </div>
         <div id="meal-5">
             <img class="meal-img" src="public/img/meal-images/turkish-eggs.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Cilibir - turkish eggs</h2>
             </div>
             <div class="time-prepare">
@@ -115,7 +115,7 @@
         </div>
         <div id="meal-6">
             <img class="meal-img" src="public/img/meal-images/panini-with-prosciutto.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Panini with prosciutto</h2>
             </div>
             <div class="time-prepare">
@@ -130,7 +130,7 @@
         </div>
         <div id="meal-7">
             <img class="meal-img" src="public/img/meal-images/chocolate-cake.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Chocolate cake</h2>
             </div>
             <div class="time-prepare">
@@ -147,7 +147,7 @@
         </div>
         <div id="meal-8">
             <img class="meal-img" src="public/img/meal-images/shakshuka.jpg" alt="">
-            <div class="meal-description">
+            <div class="meal-title">
                 <h2>Shakshuka</h2>
             </div>
             <div class="time-prepare">
