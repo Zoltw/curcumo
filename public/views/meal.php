@@ -8,13 +8,9 @@
 <body>
 <div class="container">
     <div class="psc-user-container">
-        <div class="psc-icons">
-            <img class="plan-icon" src="public/img/plan-list.svg" alt="">
-            <img class="shop-icon" src="public/img/shop-icon.svg" alt="">
-            <img class="cook-icon" src="public/img/cook-icon.svg" alt="">
-        </div>
-        <div class="user-icon">
-            <img src="public/img/user-icon.svg" alt="">
+        <div class="draw-description">
+            <h1>Plan your meals</h1>
+            <img class="user-icon-mobile" src="public/img/user-icon.svg" alt="">
         </div>
     </div>
     <div class="back-button">

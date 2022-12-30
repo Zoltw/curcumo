@@ -214,7 +214,7 @@ a.addButton {
 }
 
 .meal-section>div>div>div>.border-bottom>div {
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-size: 1.5rem;
 }
 
@@ -253,7 +253,7 @@ a.addButton-meal {
 }
 
 @media only screen and (max-device-width: 450px) {
-    section {
+    .meals-container {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 5rem;
     }
@@ -271,4 +271,24 @@ a.addButton-meal {
         width: 14rem;
         height: 4rem;
     }
+
+    /* meal-page */
+    .back-button {
+        display: none;
+    }
+
+    .meal-section>div>div {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 2rem;
+    }
+
+    .meal-section>div {
+        height: unset;
+    }
+
+    .meal-section>div>div>.meal-products {
+        height: 45rem;
+    }
+
 }
