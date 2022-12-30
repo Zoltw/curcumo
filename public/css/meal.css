@@ -140,9 +140,6 @@ a.addButton {
     margin-bottom: 5rem;
 }
 
-.meal-section>div>div>p {
-    
-}
 
 .meal-section>div>div>div>.property-meal>h3 {
     margin: 0 1rem 0 1rem;
@@ -160,18 +157,10 @@ a.addButton {
     margin-left: 1.5em;
 }
 
-.meal-section>div>div>div>div>.mini-icon {
-    display: flex;
-    width: 1.5em;
-    height: 1.5em;
-    margin-top: 2rem;
-}
-
 .meal-section>div>div>.addButton {
     background: #35A35C;
     box-shadow: 0px 2.2117px 4.4234px rgba(0, 0, 0, 0.25);
     border-radius: 22.117px;
-
 }
 
 .meal-section>div {
@@ -198,24 +187,44 @@ a.addButton {
 }
 
 .meal-section>div>div>div>.border-top {
-    width: 380px;
+    width: 400px;
     height: 91px;
-    left: 816px;
-    top: 641px;
-    
+    display: flex;
     border: 1px solid #ACACAC;
     border-radius: 30px 30px 0px 0px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .meal-section>div>div>div>.border-bottom {
-    width: 380px;
-    height: 569px;
-    left: 816px;
-    top: 731px;
-    
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ACACAC;
     border-radius: 0px 0px 30px 30px;
 }
+
+.meal-section>div>div>div>.border-bottom>div>h1 {
+    margin: 0;
+}
+
+.meal-section>div>div>div>.border-bottom>div>h3 {
+    margin: 0;
+}
+
+.meal-section>div>div>div>.border-bottom>div {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+
+.meal-section>div>div>div>div>.add-cont-meal {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
 
 .meal-section>div>div {
     display: flex;
@@ -224,6 +233,23 @@ a.addButton {
 
 .meal-section>div>div>.meal-products {
     margin: 3rem;
+}
+
+a.addButton-meal {
+    font-family: 'Dongle';
+    font-size: 130%;
+    width: 13rem;
+    height: 4rem;
+    margin-right: 1rem;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #35A35C;
+    box-shadow: 0px 2.2117px 4.4234px rgb(0 0 0 / 25%);
+    border-radius: 2rem;
+    justify-content: center;
 }
 
 @media only screen and (max-device-width: 450px) {

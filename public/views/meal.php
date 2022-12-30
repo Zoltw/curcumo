@@ -18,6 +18,7 @@
         </div>
     </div>
     <div class="back-button">
+        <img class="back-icon" src="public/img/left-arrow-icon.svg" alt="">
         <a class="backButton">back</a>
     </div>
     <section class="meal-section">
@@ -43,12 +44,29 @@
                 </div>
                 <div class="meal-products">
                     <div class="border-top">
-                        <!-- <img class="mini-icon" src="public/img/vegetarian-icon.svg" alt="">
-                        <a class="addButton">add to list</a> -->
-                        <!-- <div class="border-top"></div>
-                        <div class="border-bottom"></div> -->
+                        <img class="minus-icon" src="public/img/minus-icon.svg" alt="">
+                        <p>4 servings</p>
+                        <img class="plus-icon" src="public/img/plus-icon.svg" alt="">
                     </div>
-                    <div class="border-bottom"></div>
+                    <div class="border-bottom">
+                        <div>
+                        <h1>Ingredients</h1>
+                        <li>400g - Tagiatelle pasta</li>
+                        <li>100g - Wild garlic</li>
+                        <li>50g - Fresh basil</li>
+                        <li>30g - Cashew</li>
+                        <li>30g - Sunflower seeds</li>
+                        <li>70g - Pargeggiano regano</li>
+                        <li>100ml - Olive Oil</li>
+                        <li>Pinch of salt</li>
+                        <li>Pinch of ground black pepper</li>
+                        <h3>Optional</h3>
+                        <li>8x Cherry tomato</li>
+                    </div>
+                    <div class="add-cont-meal">
+                        <a class="addButton-meal">add to list</a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
