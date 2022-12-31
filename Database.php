@@ -8,10 +8,10 @@ class Database {
 
     public function __construct()
     {
-        $this->username = 'dbuser';
+        $this->username = 'zoltw';
         $this->password = 'dbpwd';
         $this->host = 'db';
-        $this->database = 'dbname';
+        $this->database = 'curcumo';
     }
 
     public function connect()
