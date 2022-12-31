@@ -496,9 +496,98 @@ img.back-icon {
     width: 1.5rem;
 }
 
-a.backButton {
+/* list-page */
 
+.container-list {
+    width: 100vw;
+    height: 100vh;
+    background: #FBBB04;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
 }
+
+.plan-icon-list {
+    transform: scale(0.5);
+    opacity: 0.25;
+}
+
+.shop-icon-list {
+    transform: scale(0.5);
+}
+
+.list-container {
+    width: 70%;
+    background: #FFF8EC;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 22px;
+}
+
+section.list-section {
+    font-family: 'Dongle';
+    letter-spacing: 0.7px;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+}
+
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-color: #EAF0F6;
+    border: 2px solid #33475B;
+    border-radius: 5px;
+  }
+  
+  .label-container input:checked ~ .checkmark {
+    background-color: #33475B;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .label-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .label-container .checkmark:after {
+    left: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .user-icon-list {
+    transform: scale(1.4);
+    padding-left: calc(50%);
+}
+
 
 @media only screen and (max-device-width: 940px) {
     .user-icon {
@@ -716,4 +805,37 @@ a.backButton {
     .plate-container {
         align-items: center;
     }
-}
+
+    /* meal-page */
+    .container {
+        justify-content: flex-start;
+    }
+
+    .list-container {
+        width: 90%;
+        margin: 2rem 0;
+    }
+
+    section.list-section {
+        font-size: 4rem;
+        margin-bottom: 6rem;
+    }
+
+    .checkmark {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 15px;
+    }
+
+    .label-container .checkmark:after {
+        left: 15px;
+        width: 16px;
+        height: 32px;
+    }
+
+    .label-container {
+        padding-left: 75px;
+    }
+    
+
+}   

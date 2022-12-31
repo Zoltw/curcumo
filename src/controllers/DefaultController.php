@@ -21,7 +21,7 @@ class DefaultController extends AppController {
     }
 
     public function pref_second() {
-        $this->render('pref-second');
+        $this->render('pref_second');
     }
 
     public function list() {
