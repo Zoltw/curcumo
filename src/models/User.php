@@ -1,14 +1,14 @@
 <?php
 
 class User {
+    private $name;
     private $email;
     private $password;
-    private $name;
 
-    public function __construct(string $email, string $password,string $name) {
+    public function __construct(string $name, string $email, string $password) {
+        $this->name = $name;
         $this->email = $email;
         $this->password = $password;
-        $this->name = $name;
     }
 
     public function getEmail(): string {
