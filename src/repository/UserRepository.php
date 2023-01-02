@@ -3,11 +3,9 @@
 require_once 'Repository.php';
 require_once __DIR__.'/../models/User.php';
 
-class UserRepository extends Repository
-{
+class UserRepository extends Repository {
 
-    public function getUser(string $email): ?User
-    {
+    public function getUser(string $email): ?User {
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.users WHERE email = :email
         ');
@@ -27,8 +25,7 @@ class UserRepository extends Repository
         );
     }
 
-    public function addUser(User $user)
-    {
+    public function addUser(User $user) {
         $stmt = $this->database->connect()->prepare('
             INSERT INTO users_details (name)
             VALUES (?, ?, ?)
@@ -50,8 +47,7 @@ class UserRepository extends Repository
         ]);
     }
 
-    public function getUserDetailsId(User $user): int
-    {
+    public function getUserDetailsId(User $user): int {
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.users_details WHERE name = :name
         ');

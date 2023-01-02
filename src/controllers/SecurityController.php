@@ -8,14 +8,12 @@ class SecurityController extends AppController {
 
     private $userRepository;
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
         $this->userRepository = new UserRepository();
     }
 
-    public function login()
-    {
+    public function login() {
         if (!$this->isPost()) {
             return $this->render('login');
         }
@@ -41,8 +39,7 @@ class SecurityController extends AppController {
         header("Location: {$url}/pref");
     }
 
-    public function register()
-    {
+    public function register() {
         if (!$this->isPost()) {
             return $this->render('register');
         }
