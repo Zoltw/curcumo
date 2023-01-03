@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <title>sign up to curcumo</title>
-    <link rel="icon" href="public/img/curcumo-logo.png" type="image/icon type">
+    <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <img src="public/img/hatLogo.svg">
+            <img src="/public/img/hatLogo.svg">
         </div>
         <div class="page-container-sign">
             <div class="login-description">

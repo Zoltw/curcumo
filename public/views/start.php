@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <title>get started</title>
-    <link rel="icon" href="public/img/curcumo-logo.png" type="image/icon type">
+    <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
 </head>
 <body>
     <div class="container">
         <div class="logo-get-container">
             <div class="logo-start">
-                <img src="public/img/logo.svg">
+                <img src="/public/img/logo.svg">
             </div>
             <div class="logo-start-button">
                 <a href="login" class="start">Get started</a>
@@ -32,13 +32,13 @@
                 </div>
                 <div class="start-page-icons">
                     <div class="start-page-plan-icon">
-                        <img src="public/img/plan-list.svg">
+                        <img src="/public/img/plan-list.svg">
                     </div>
                     <div class="start-page-shop-icon">
-                        <img src="public/img/shop-icon.svg" alt="">
+                        <img src="/public/img/shop-icon.svg" alt="">
                     </div>
                     <div class="start-page-cook-icon">
-                        <img src="public/img/cook-icon.svg" alt="">
+                        <img src="/public/img/cook-icon.svg" alt="">
                     </div>
                 </div>
             </div>
