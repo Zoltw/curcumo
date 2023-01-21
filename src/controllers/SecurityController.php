@@ -6,7 +6,7 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController {
 
-    private $userRepository;
+    private UserRepository $userRepository;
 
     public function __construct() {
         parent::__construct();
@@ -19,7 +19,7 @@ class SecurityController extends AppController {
         }
 
         $email = $_POST['email'];
-        $password = md5($_POST['password']);
+        $password = $_POST['password'];
 
         $user = $this->userRepository->getUser($email);
 
@@ -35,22 +35,38 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/pref");
+        header("Location: http://$_SERVER[HTTP_HOST]/pref");
     }
 
     public function register() {
+        echo "dupa";
         if (!$this->isPost()) {
-            return $this->render('register');
+            return $this->render('sign');
         }
 
-        $name = $_POST['name'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $userEmail = null;
 
-        $user = new User($name, $email, md5(md5($password)));
+        try {
+            $userEmail=$this->userRepository->getUser($email);
+        } catch(UnexpectedValueException $e) {
+            return $this->render('sign', ['messages' => ['Something went wrong! Please try again!']]);
+        }
+
+        if ($userEmail) {
+            return $this->render('sign', ['messages' => ['User with this email already exist!']]);
+        }
+
+        if (empty($name) || empty($email) || empty($password)) {
+            return $this->render('sign', ['messages' => ['All fields are required!']]);
+        }
+
+
+        $user = new User($_POST['name'], $_POST['email'], password_hash($_POST['password'], PASSWORD_BCRYPT));
 
         $this->userRepository->addUser($user);
+
+        header("Location: http://$_SERVER[HTTP_HOST]/login");
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }

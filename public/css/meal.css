@@ -5,6 +5,11 @@
     margin: 2em 0;
     padding: 0 1em 1em 1em;
     overflow: auto;
+    scrollbar-width: none;
+}
+
+.meals-container::-webkit-scrollbar {
+    display: none;
 }
 
 .meals-container>div>.meal-img {
@@ -106,6 +111,11 @@ a.addButton {
     margin: 2em 0;
     padding: 0 1em 1em 1em;
     overflow: auto;
+    scrollbar-width: none;
+}
+
+.meal-section::-webkit-scrollbar {
+    display: none;
 }
 
 .meal-section>div>.meal-img {
