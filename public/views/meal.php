@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/meal.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
-    <link rel="icon" href="public/img/curcumo-logo.png" type="image/icon type">
+    <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
 </head>
 <body>
 <div class="container">
     <div class="psc-user-container">
         <div class="draw-description">
             <h1>Plan your meals</h1>
-            <img class="user-icon-mobile" src="public/img/user-icon.svg" alt="">
+            <img class="user-icon-mobile" src="/public/img/user-icon.svg" alt="">
         </div>
     </div>
     <div class="back-button">
-        <img class="back-icon" src="public/img/left-arrow-icon.svg" alt="">
+        <img class="back-icon" src="/public/img/left-arrow-icon.svg" alt="">
         <a class="backButton">back</a>
     </div>
     <section class="meal-section">
         <div id="meal-1">
-            <img class="meal-img" src="public/img/meal-images/pesto-tagiatelle.jpg" alt="">
+            <img class="meal-img" src="/public/img/meal-images/pesto-tagiatelle.jpg" alt="">
             <div>
                 <div class="meal-description">
                     <div class="meal-descript">

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/meal.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>check your list</title>
-    <link rel="icon" href="public/img/curcumo-logo.png" type="image/icon type">
+    <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
 </head>
 <body>
 <div class="container-list">
     <div class="psc-user-container">
         <div class="psc-icons">
-            <img class="plan-icon-list" src="public/img/plan-list.svg" alt="">
-            <img class="shop-icon-list" src="public/img/shop-icon.svg" alt="">
-            <img class="cook-icon" src="public/img/cook-icon.svg" alt="">
+            <img class="plan-icon-list" src="/public/img/plan-list.svg" alt="">
+            <img class="shop-icon-list" src="/public/img/shop-icon.svg" alt="">
+            <img class="cook-icon" src="/public/img/cook-icon.svg" alt="">
         </div>
         <div class="user-icon">
-            <img src="public/img/user-icon.svg" alt="">
+            <img src="/public/img/user-icon.svg" alt="">
         </div>
     </div>
     <div class="list-container">

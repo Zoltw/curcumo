@@ -768,7 +768,7 @@ section.list-section {
     .plan-page-container {
         background: none;
         box-shadow: none;
-        border-radius: none;
+        /*border-radius: none;*/
     }
 
     .psc-icons {

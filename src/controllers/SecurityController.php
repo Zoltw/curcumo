@@ -6,9 +6,14 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController {
 
-    public function login() {
-        $userRepository = new UserRepository();
+    private UserRepository $userRepository;
 
+    public function __construct() {
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+    }
+
+    public function login() {
         if (!$this->isPost()) {
             return $this->render('login');
         }
@@ -16,7 +21,7 @@ class SecurityController extends AppController {
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $user = $userRepository->getUser($email);
+        $user = $this->userRepository->getUser($email);
 
         if (!$user) {
             return $this->render('login', ['messages' => ['User not found!']]);
@@ -26,11 +31,36 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/pref");
+        header("Location: http://$_SERVER[HTTP_HOST]/pref");
+    }
+
+    public function register() {
+        print "dupa1";
+        if (!$this->isPost()) {
+            return $this->render('sign');
+        }
+
+        $email = $_POST['email'];
+        $userEmail = null;
+
+        try {
+            $userEmail=$this->userRepository->getUser($email);
+        } catch(UnexpectedValueException $e) {
+            return $this->render('sign', ['messages' => ['Something went wrong! Please try again!']]);
+        }
+
+        if ($userEmail) {
+            return $this->render('sign', ['messages' => ['User with this email already exist!']]);
+        }
+
+        $user = new User($_POST['name'], $_POST['email'], password_hash($_POST['password'], PASSWORD_BCRYPT));
+
+        $this->userRepository->addUser($user);
+
+        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
 }
