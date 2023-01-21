@@ -31,7 +31,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
@@ -39,7 +39,7 @@ class SecurityController extends AppController {
     }
 
     public function register() {
-        echo "dupa";
+        print "dupa1";
         if (!$this->isPost()) {
             return $this->render('sign');
         }
@@ -57,16 +57,9 @@ class SecurityController extends AppController {
             return $this->render('sign', ['messages' => ['User with this email already exist!']]);
         }
 
-        if (empty($name) || empty($email) || empty($password)) {
-            return $this->render('sign', ['messages' => ['All fields are required!']]);
-        }
-
-
         $user = new User($_POST['name'], $_POST['email'], password_hash($_POST['password'], PASSWORD_BCRYPT));
 
         $this->userRepository->addUser($user);
-
-        header("Location: http://$_SERVER[HTTP_HOST]/login");
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }

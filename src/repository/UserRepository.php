@@ -22,12 +22,10 @@ class UserRepository extends Repository {
             $user['name'],
             $user['email'],
             $user['password'],
-//            $user['id_user']
         );
     }
 
     public function addUser(User $user) {
-        echo "dupaaddUser";
         $db = $this->database->connect();
         $stmt = $db->prepare('
             INSERT INTO users (name, email, password)
@@ -39,19 +37,6 @@ class UserRepository extends Repository {
             $user->getEmail(),
             $user->getPassword()
         ]);
-
-//        $id = $db->lastInsertId();
     }
 
-//    public function getUserDetailsId(User $user): int {
-//        $stmt = $this->database->connect()->prepare('
-//            SELECT * FROM public.users_details WHERE name = :name
-//        ');
-//        $name = $user->getName();
-//        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-//        $stmt->execute();
-//
-//        $data = $stmt->fetch(PDO::FETCH_ASSOC);
-//        return $data['id'];
-//    }
 }
