@@ -14,6 +14,10 @@ class UserRepository extends Repository {
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        if (!$user) {
+            return null;
+        }
+
         return new User(
             $user['name'],
             $user['email'],
@@ -28,7 +32,6 @@ class UserRepository extends Repository {
         $stmt = $db->prepare('
             INSERT INTO users (name, email, password)
             VALUES (?, ?, ?)
-            RETURNING id_user
         ');
 
         $stmt->execute([
