@@ -17,22 +17,22 @@
         <div class="choose-preference">
             <div class="sections">
                 <div class="first-section">
-                    <div class="first-icon" onclick="changeBackGround(this)">
+                    <div class="first-icon" onclick="changeBackground(this)">
                         <img src="/public/img/milk-icon.svg" alt="">
                         <a href="pref_second"></a>
                         <b>no lactose</b>
                     </div>
-                    <div class="second-icon" onclick="changeBackGround(this)">
+                    <div class="second-icon" onclick="changeBackground(this)">
                         <img src="/public/img/vegan-icon.svg" alt="">
                         <b>vegan</b>
                     </div>
                 </div>
                 <div class="second-section">
-                    <div class="third-icon" onclick="changeBackGround(this)">
+                    <div class="third-icon" onclick="changeBackground(this)">
                         <img src="/public/img/vegetarian-icon.svg" alt="">
                         <b>vegetarian</b>
                     </div>
-                    <div class="fourth-icon" onclick="changeBackGround(this)">
+                    <div class="fourth-icon" onclick="changeBackground(this)">
                         <img src="/public/img/no-gluten-icon.svg" alt="">
                         <b>no gluten</b>
                     </div>

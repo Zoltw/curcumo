@@ -17,21 +17,21 @@
         <div class="choose-preference">
             <div class="sections">
                 <div class="first-section">
-                    <div class="first-icon" onclick="changeBackGround(this)">
+                    <div class="first-icon" onclick="changeBackground(this)">
                         <img src="/public/img/bacon-icon.svg" alt="">
                         <b>less meat</b>
                     </div>
-                    <div class="second-icon" onclick="changeBackGround(this)">
+                    <div class="second-icon" onclick="changeBackground(this)">
                         <img src="/public/img/greens-icon.svg" alt="">
                         <b>more greens</b>
                     </div>
                 </div>
                 <div class="second-section">
-                    <div class="third-icon" onclick="changeBackGround(this)">
+                    <div class="third-icon" onclick="changeBackground(this)">
                         <img src="/public/img/bread-icon.svg" alt="">
                         <b>low ig</b>
                     </div>
-                    <div class="fourth-icon" onclick="changeBackGround(this)">
+                    <div class="fourth-icon" onclick="changeBackground(this)">
                         <img src="/public/img/fish-icon.svg" alt="">
                         <b>more fishes</b>
                     </div>

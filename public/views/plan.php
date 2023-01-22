@@ -29,7 +29,7 @@
                 <img class="icon3" src="/public/img/plate-icon.svg" alt="">
             </div>
             <div class="draw-button-container">
-                <a class="draw-button">draw your meal</a>
+                <a class="draw-button">draw your meals</a>
             </div>
         </div>
     </div>

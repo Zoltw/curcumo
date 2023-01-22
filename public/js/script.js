@@ -3,14 +3,13 @@ function isEmail(email) {
 }
 
 
-async function changeBackGround(x) {
+function changeBackground(x) {
     if (x.style.background === "rgb(216, 216, 216)") {
         x.style.background = "#FFFFFF";
     }
     else {
         x.style.background = "#D8D8D8";
     }
-
 }
 
 function markValidation(element, condition) {
