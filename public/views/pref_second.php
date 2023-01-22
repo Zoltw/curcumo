@@ -3,6 +3,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <title>choose your preferences</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -16,21 +17,21 @@
         <div class="choose-preference">
             <div class="sections">
                 <div class="first-section">
-                    <div class="first-icon">
+                    <div class="first-icon" onclick="changeBackGround(this)">
                         <img src="/public/img/bacon-icon.svg" alt="">
                         <b>less meat</b>
                     </div>
-                    <div class="second-icon">
+                    <div class="second-icon" onclick="changeBackGround(this)">
                         <img src="/public/img/greens-icon.svg" alt="">
                         <b>more greens</b>
                     </div>
                 </div>
                 <div class="second-section">
-                    <div class="third-icon">
+                    <div class="third-icon" onclick="changeBackGround(this)">
                         <img src="/public/img/bread-icon.svg" alt="">
                         <b>low ig</b>
                     </div>
-                    <div class="fourth-icon">
+                    <div class="fourth-icon" onclick="changeBackGround(this)">
                         <img src="/public/img/fish-icon.svg" alt="">
                         <b>more fishes</b>
                     </div>
@@ -38,7 +39,7 @@
             </div>
         </div>
         <div class="pref-button">
-            <a href="#" class="pref">let's plan!</a>
+            <a href="plan" class="pref">let's plan!</a>
         </div>
     </div>
     <div class="contact-button-container-pref">
