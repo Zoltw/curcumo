@@ -39,7 +39,6 @@ class SecurityController extends AppController {
     }
 
     public function register() {
-        print "dupa1";
         if (!$this->isPost()) {
             return $this->render('sign');
         }

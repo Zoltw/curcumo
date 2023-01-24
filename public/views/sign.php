@@ -14,8 +14,8 @@
                 <h1>sign up to curcumo</h1>
             </div>
             <div class="login-container">
-                <form class="login" action="register" method="POST">
-                    <div class="message">
+                <form class="login">
+                    <div class="message" action="register" method="POST">
                         <?php if(isset($messages)) {
                             foreach ($messages as $message) {
                                 echo $message;
@@ -24,7 +24,7 @@
                         ?>
                     </div>
                     <input name="name" type="text" placeholder="Name">
-                    <input name="email" type="text" placeholder="Email">
+                    <input name="email" type="email" placeholder="Email">
                     <input name="password" type="password" placeholder="Password">
                     <button type="submit" class="login">sign up with email</button>
                 </form>
