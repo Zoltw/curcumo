@@ -7,10 +7,14 @@ class Meal {
     private string $goal;
     private string $time;
     private string $level_diff;
-    private string $description;
     private string $products;
     private string $optional_products;
     private string $image;
+    private string $description_1;
+    private string $description_2;
+    private string $description_3;
+    private string $description_4;
+    private string $description_5;
 
     public function __construct(
         string $name,
@@ -18,10 +22,14 @@ class Meal {
         string $goal,
         string $time,
         string $level_diff,
-        string $description,
         string $products,
         string $optional_products,
-        string $image
+        string $image,
+        string $description_1,
+        string $description_2,
+        string $description_3,
+        string $description_4,
+        string $description_5
         ) {
 
         $this->name = $name;
@@ -29,10 +37,14 @@ class Meal {
         $this->goal = $goal;
         $this->time = $time;
         $this->level_diff = $level_diff;
-        $this->description = $description;
         $this->products = $products;
         $this->optional_products = $optional_products;
         $this->image = $image;
+        $this->description_1 = $description_1;
+        $this->description_2 = $description_2;
+        $this->description_3 = $description_3;
+        $this->description_4 = $description_4;
+        $this->description_5 = $description_5;
     }
 
     public function getName(): string {
@@ -75,14 +87,6 @@ class Meal {
         $this->level_diff = $level_diff;
     }
 
-    public function getDescription(): string {
-        return $this->description;
-    }
-
-    public function setDescription(string $description) {
-        $this->description = $description;
-    }
-
     public function getProducts(): string {
         return $this->products;
     }
@@ -105,6 +109,46 @@ class Meal {
 
     public function setImage(string $image) {
         $this->image = $image;
+    }
+
+    public function getDescription_1(): string {
+        return $this->description_1;
+    }
+
+    public function setDescription_1(string $description_1) {
+        $this->description_1 = $description_1;
+    }
+
+    public function getDescription_2(): string {
+        return $this->description_2;
+    }
+
+    public function setDescription_2(string $description_2) {
+        $this->description_2 = $description_2;
+    }
+
+    public function getDescription_3(): string {
+        return $this->description_3;
+    }
+
+    public function setDescription_3(string $description_3) {
+        $this->description_3 = $description_3;
+    }
+
+    public function getDescription_4(): string {
+        return $this->description_4;
+    }
+
+    public function setDescription_4(string $description_4) {
+        $this->description_4 = $description_4;
+    }
+
+    public function getDescription_5(): string {
+        return $this->description_5;
+    }
+
+    public function setDescription_5(string $description_5) {
+        $this->description_5 = $description_5;
     }
 
 }
