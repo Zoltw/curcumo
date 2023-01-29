@@ -16,7 +16,6 @@ class MealRepository extends Repository {
             }
 
             return new Meal(
-                $meal['id_meal'],
                 $meal['name'],
                 $meal['type'],
                 $meal['goal'],

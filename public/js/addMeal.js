@@ -1,12 +1,5 @@
 
-function loadMeals() {
-    // var meals = getMealsFromDb();
-    // var mealsSelect = $("#meals");
-    // mealsSelect.empty();
-    // mealsSelect.append("<option value=''>Select a meal</option>");
-    // $.each(meals, function (i, meal) {
-    //     mealsSelect.append("<option value='" + meal.id + "'>" + meal.name + "</option>");
-    // });
+function showMeals() {
 }
 
 
