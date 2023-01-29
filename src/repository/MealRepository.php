@@ -2,11 +2,11 @@
 
 class MealRepository extends Repository {
 
-        public function getMeal($id): ?Meal {
+        public function getAllMealFromDatabase($id_meal): ?Meal {
             $stmt = $this->database->connect()->prepare('
-                SELECT * FROM public.meals WHERE id = :id
+                SELECT * FROM public.meals WHERE id_meal = :id_meal
             ');
-            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+            $stmt->bindParam(':id_meal', $id_meal, PDO::PARAM_STR);
             $stmt->execute();
 
             $meal = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -16,6 +16,7 @@ class MealRepository extends Repository {
             }
 
             return new Meal(
+                $meal['id_meal'],
                 $meal['name'],
                 $meal['type'],
                 $meal['goal'],

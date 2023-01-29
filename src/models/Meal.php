@@ -2,6 +2,7 @@
 
 class Meal {
 
+    private int $id_meal;
     private string $name;
     private string $type;
     private string $goal;
@@ -17,6 +18,7 @@ class Meal {
     private string $description_5;
 
     public function __construct(
+        int $id_meal,
         string $name,
         string $type,
         string $goal,
@@ -32,6 +34,7 @@ class Meal {
         string $description_5
         ) {
 
+        $this->id_meal = $id_meal;
         $this->name = $name;
         $this->type = $type;
         $this->goal = $goal;
@@ -45,6 +48,14 @@ class Meal {
         $this->description_3 = $description_3;
         $this->description_4 = $description_4;
         $this->description_5 = $description_5;
+    }
+
+    public function getId_meal(): int {
+        return $this->id_meal;
+    }
+
+    public function setId_meal(int $id_meal) {
+        $this->id_meal = $id_meal;
     }
 
     public function getName(): string {

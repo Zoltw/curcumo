@@ -52,6 +52,13 @@ class SecurityController extends AppController {
             return $this->render('sign', ['messages' => ['Something went wrong! Please try again!']]);
         }
 
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            return $this->render('registration', ['messages' => ['Bad email format!']]);
+        }
+
+        if ($_POST['email'] == null or $_POST['password'] == null or $_POST['name'] == null)
+            return $this->render('registration', ['messages' => ['All fields are required!']]);
+
         if ($userEmail) {
             return $this->render('sign', ['messages' => ['User with this email already exist!']]);
         }
