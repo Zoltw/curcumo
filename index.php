@@ -13,7 +13,7 @@ Router::get('pref_second', 'DefaultController');
 Router::get('list', 'DefaultController');
 Router::get('meal', 'DefaultController');
 Router::get('plan', 'DefaultController');
-Router::get('getMeal', 'MealController');
+Router::get('meals', 'MealController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
 

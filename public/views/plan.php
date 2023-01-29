@@ -42,135 +42,46 @@
         </div>
     </div>
     <section class="meals-container">
-        <template id="meals">
-            <div id="">
-                <img class="meal-img" src="/public/img/meal-images/pesto-tagiatelle.jpg" alt="">
-                <div class="meal-title">
-                    <h2>Pesto tagiatelle</h2>
-                </div>
-                <div class="time-prepare">
-                    <div class="property-meal">
-                        <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">
-                        <h3>40 min</h3>
+        <?php
+            if(isset($meals)) {
+                foreach ($meals as $meal): ?>
+                    <div id="<?= $meal->getId_meal(); ?>">
+                        <img class="meal-img" src="public/img/meal-images/<?= $meal->getImage(); ?>">
+                        <div class="meal-title">
+                            <h2><?= $meal->getName(); ?></h2>
+                        </div>
+                        <div class="time-prepare">
+                            <div class="property-meal">
+                                <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">
+                                <h3><?= $meal->getTime(); ?></h3>
+                            </div>
+                            <div class="add-cont">
+                                <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
+                                <a class="addButton">add to list</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="add-cont">
-                        <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
-                        <a class="addButton">add to list</a>
-                    </div>
-                </div>
-            </div>
-        </template>
-<!--        <div id="meal-2">-->
-<!--            <img class="meal-img" src="public/img/meal-images/pumpkin-soup.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Pumpkin soup</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>60 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <img class="mini-icon" src="public/img/vegan-mini-icon.svg" alt="">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="meal-3">-->
-<!--            <img class="meal-img" src="/public/img/meal-images/butter-chicken.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Butter chicken with rice</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>50 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="meal-4">-->
-<!--            <img class="meal-img" src="/public/img/meal-images/irish-pancakes.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Irish pancakes</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>20 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="meal-5">-->
-<!--            <img class="meal-img" src="/public/img/meal-images/turkish-eggs.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Cilibir - turkish eggs</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>20 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="meal-6">-->
-<!--            <img class="meal-img" src="/public/img/meal-images/panini-with-prosciutto.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Panini with prosciutto</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>15 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="meal-7">-->
-<!--            <img class="meal-img" src="/public/img/meal-images/chocolate-cake.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Chocolate cake</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>80 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <img class="mini-icon" src="/public/img/no-gluten-mini-icon.svg" alt=""> -->
-<!--                    <img class="mini-icon" src="/public/img/vegan-mini-icon.svg" alt="">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div id="meal-8">-->
-<!--            <img class="meal-img" src="/public/img/meal-images/shakshuka.jpg" alt="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>Shakshuka</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>45 min</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>    -->
-<!--        </div>-->
+                <?php endforeach;
+            }
+        ?>
     </section>
+<!--    <template class="meals-template">-->
+<!--        <div id="">-->
+<!--            <img class="meal-img" src="">-->
+<!--            <div class="meal-title">-->
+<!--                <h2>name</h2>-->
+<!--            </div>-->
+<!--            <div class="time-prepare">-->
+<!--                <div class="property-meal">-->
+<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
+<!--                    <h3>time</h3>-->
+<!--                </div>-->
+<!--                <div class="add-cont">-->
+<!--                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">-->
+<!--                    <a class="addButton">add to list</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </template>-->
 </div>
 </body> 
