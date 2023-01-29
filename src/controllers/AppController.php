@@ -31,4 +31,17 @@ class AppController {
         }
         print $output;
     }
+
+    public function checkAutentication() {
+        if (!isset($_COOKIE['user'])) {
+            $url = "htp://$_SERVER[HTTP_HOST]";
+            HEADER("Location: {$url}/");
+        }
+    }
+
+    public function getUserFromCookies() {
+        $email = $_COOKIE['user'];
+        $userRepository = new UserRepository();
+
+    }
 }

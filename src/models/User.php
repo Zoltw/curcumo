@@ -1,14 +1,16 @@
 <?php
 
 class User {
-    private $name;
-    private $email;
-    private $password;
+    private string $name;
+    private string $email;
+    private string $password;
+    private int $role;
 
-    public function __construct(string $name, string $email, string $password) {
+    public function __construct(string $name, string $email, string $password, int $role) {
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
+        $this->role = $role;
     }
 
     public function getEmail(): string {
@@ -33,6 +35,14 @@ class User {
 
     public function setName(string $name) {
         $this->name = $name;
+    }
+
+    public function getRole(): int {
+        return $this->role;
+    }
+
+    public function setRole(int $role) {
+        $this->role = $role;
     }
 
 

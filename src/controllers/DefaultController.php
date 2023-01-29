@@ -36,4 +36,12 @@ class DefaultController extends AppController {
         $this->render('plan');
     }
 
+    public function logout() {
+        setcookie("user", $_COOKIE['user'], time() - 3600, "/");
+        if (isset($_COOKIE['user'])) {
+            header("Refresh:0");
+        }
+        $this->index(null);
+    }
+
 }
