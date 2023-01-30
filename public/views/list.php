@@ -7,6 +7,9 @@
 </head>
 <body>
 <div class="container-list">
+    <?php
+    if(isset($_COOKIE['user'])) {
+    ?>
     <div class="psc-user-container">
         <div class="psc-icons">
             <img class="plan-icon-list" src="/public/img/plan-list.svg" alt="">
@@ -71,5 +74,10 @@
             </form>
         </section>
     </div>
+    <?php } else {
+        header("Location: /login");
+        die();
+        ?>
+    <?php } ?>
 </div>
 </body> 

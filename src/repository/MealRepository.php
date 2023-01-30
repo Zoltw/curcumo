@@ -19,21 +19,25 @@ class MealRepository extends Repository {
             }
 
             return new Meal(
+                $meal['id_meal'],
                 $meal['name'],
                 $meal['type'],
                 $meal['goal'],
                 $meal['time'],
                 $meal['level_diff'],
-                $meal['description'],
                 $meal['products'],
                 $meal['optional_products'],
                 $meal['image'],
+                $meal['description_1'],
+                $meal['description_2'],
+                $meal['description_3'],
+                $meal['description_4'],
+                $meal['description_5']
             );
         }
 
         public function getAllMeals(): array {
             $result = [];
-            print "jestem w getAllMeals";
             $stmt = $this->database->connect()->prepare('
                 SELECT * FROM meals
             ');
@@ -41,11 +45,15 @@ class MealRepository extends Repository {
             $meals = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($meals as $meal) {
                 $result[] = new Meal(
+                    $meal['id_meal'],
                     $meal['name'],
                     $meal['type'],
                     $meal['goal'],
                     $meal['time'],
-                    $meal['image'],
+                    $meal['level_diff'],
+                    "",
+                    "",
+                    $meal['image']
                 );
             }
             return $result;

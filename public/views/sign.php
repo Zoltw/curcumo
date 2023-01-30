@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="/public/img/hatLogo.svg">
+            <img src="/public/img/hatLogo.svg" onclick="location.replace('/')">
         </div>
         <div class="page-container-sign">
             <div class="login-description">

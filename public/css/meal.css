@@ -262,6 +262,18 @@ a.addButton-meal {
     justify-content: center;
 }
 
+@media (min-width: 2000px) {
+    .meals-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .meals-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media only screen and (max-device-width: 450px) {
     .meals-container {
         grid-template-columns: repeat(1, 1fr);

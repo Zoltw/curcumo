@@ -34,6 +34,7 @@ class SecurityController extends AppController {
         if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
+        setcookie("user", $_POST['email'], time() + (3600 * 30), "/");
 
         header("Location: http://$_SERVER[HTTP_HOST]/pref");
     }

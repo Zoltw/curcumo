@@ -10,17 +10,20 @@ class MealController extends AppController {
 
     public function __construct() {
         parent::__construct();
-        print "jestem w MealController";
         $this->mealRepository = new MealRepository();
     }
 
-    public function meals() {
+    public function plan() {
         if($this->isGet()) {
             $meals = $this->mealRepository->getAllMeals();
-            $this->render('meals', ['meals' => $meals]);
+            $this->render('plan', ['meals' => $meals]);
         }
-        else {
-            print "jestem w else meals";
+    }
+
+    public function meal() {
+        if($this->isGet()) {
+            $meal = $this->mealRepository->getMealFromDatabase($_GET['id_meal']);
+            $this->render('meal', ['meal' => $meal]);
         }
     }
 
