@@ -7,8 +7,11 @@
 </head>
 <body>
 <div class="container">
+    <?php
+    if(isset($_COOKIE['user'])) {
+    ?>
     <div class="logo">
-        <img src="/public/img/hatLogo.svg">
+        <img src="/public/img/hatLogo.svg" onclick="location.replace('/')">
     </div>
     <div class="preferences-container">
         <div class="pref-description">
@@ -46,5 +49,10 @@
         <a class="contact-button">Contact us</a>
         <a class="contact-button">Report a bug</a>
     </div>
+    <?php } else {
+        header("Location: /login");
+        die();
+        ?>
+    <?php } ?>
 </div>
 </body>

@@ -8,6 +8,9 @@
 </head>
 <body>
 <div class="container">
+    <?php
+    if(isset($_COOKIE['user'])) {
+        ?>
     <div class="psc-user-container">
         <div class="psc-icons">
             <img class="plan-icon" src="/public/img/plan-list.svg" alt="">
@@ -19,7 +22,7 @@
                 <img class="button-icon-user" src="/public/img/user-icon.svg" alt="">
                 <div class="dropdown-content">
                     <form action="logout" method="POST">
-                        <button type="submit" class="logout">Logout</button>
+                        <button type="submit" class="logout" onclick="location.replace('/')">Logout </button>
                     </form>
                 </div>
             </div>
@@ -75,5 +78,10 @@
             }
         ?>
     </section>
+    <?php } else {
+        header("Location: /login");
+        die();
+        ?>
+    <?php } ?>
 </div>
 </body> 

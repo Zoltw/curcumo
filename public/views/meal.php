@@ -7,6 +7,9 @@
 </head>
 <body>
 <div class="container">
+    <?php
+    if(isset($_COOKIE['user'])) {
+        ?>
     <div class="psc-user-container">
         <div class="draw-description">
             <h1>Plan your meals</h1>
@@ -27,7 +30,7 @@
                         <h2><?= $meal->getName(); ?></h2>
                         <?php
                         if($meal->getType() == "vegetarian") { ?>
-                            <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
+                            <img class="mini-icon " src="/public/img/vegetarian-icon.svg" alt="">
                         <?php }
                         if($meal->getType() == "vegan") { ?>
                             <img class="mini-icon" src="/public/img/vegan-icon.svg" alt="">
@@ -58,17 +61,27 @@
                     <div class="border-bottom">
                         <div>
                             <h1>Ingredients</h1>
-                            <li>400g - Tagiatelle pasta</li>
-                            <li>100g - Wild garlic</li>
-                            <li>50g - Fresh basil</li>
-                            <li>30g - Cashew</li>
-                            <li>30g - Sunflower seeds</li>
-                            <li>70g - Pargeggiano regano</li>
-                            <li>100ml - Olive Oil</li>
-                            <li>Pinch of salt</li>
-                            <li>Pinch of ground black pepper</li>
-                            <h3>Optional</h3>
-                            <li>8x Cherry tomato</li>
+                            <?php
+                            $ingredients = $meal->getProducts();
+                            foreach($ingredients as $ingredient) { ?>
+                                <li><?= $ingredient->getAmount(); $ingredient->getUnit();?> - <?= $ingredient->getName(); ?></li>
+                            <?php } ?>
+<!--                            <li>400g - Tagiatelle pasta</li>-->
+<!--                            <li>100g - Wild garlic</li>-->
+<!--                            <li>50g - Fresh basil</li>-->
+<!--                            <li>30g - Cashew</li>-->
+<!--                            <li>30g - Sunflower seeds</li>-->
+<!--                            <li>70g - Pargeggiano regano</li>-->
+<!--                            <li>100ml - Olive Oil</li>-->
+<!--                            <li>Pinch of salt</li>-->
+<!--                            <li>Pinch of ground black pepper</li>-->
+<!--                            <h3>Optional</h3>-->
+                            <?php
+                            $optionals = $meal->getOptional_products();
+                            foreach($optionals as $optional) { ?>
+                                <li><?= $optional->getAmount(); $optional->getUnit();?> - <?= $optional->getName(); ?></li>
+                            <?php } ?>
+<!--                            <li>8x Cherry tomato</li>-->
                         </div>
                         <div class="add-cont-meal">
                             <a class="addButton-meal">add to list</a>
@@ -77,7 +90,12 @@
                 </div>
             </div>
         </div>
-        <?php } echo "dupa"?>
+        <?php } ?>
     </section>
+    <?php } else {
+        header("Location: /login");
+        die();
+        ?>
+    <?php } ?>
 </div>
-</body> 
+</body>
