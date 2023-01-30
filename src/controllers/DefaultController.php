@@ -32,9 +32,9 @@ class DefaultController extends AppController {
         $this->render('list');
     }
 
-    public function meal() {
-        $this->render('meal');
-    }
+//    public function meal() {
+//        $this->render('meal');
+//    }
 
 //    public function plan() {
 //        $meals = $this->mealRepository->getAllMeals();

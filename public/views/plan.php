@@ -43,9 +43,9 @@
     </div>
     <section class="meals-container">
         <?php
-            if(isset($meals)) {;
+            if(isset($meals)) {
                 foreach ($meals as $meal):?>
-                    <div id="<?= $meal->getId_meal(); ?>">
+                    <div id="<?= $meal->getId_meal(); ?>" onclick="console.log('dupa')">
                         <img class="meal-img" src="/public/img/meal-images/<?= $meal->getImage(); ?>">
                         <div class="meal-title">
                             <h2><?= $meal->getName(); ?></h2>

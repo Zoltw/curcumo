@@ -19,15 +19,20 @@ class MealRepository extends Repository {
             }
 
             return new Meal(
+                $meal['id_meal'],
                 $meal['name'],
                 $meal['type'],
                 $meal['goal'],
                 $meal['time'],
                 $meal['level_diff'],
-                $meal['description'],
                 $meal['products'],
                 $meal['optional_products'],
-                $meal['image']
+                $meal['image'],
+                $meal['description_1'],
+                $meal['description_2'],
+                $meal['description_3'],
+                $meal['description_4'],
+                $meal['description_5']
             );
         }
 
