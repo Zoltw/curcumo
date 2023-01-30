@@ -43,20 +43,30 @@
     </div>
     <section class="meals-container">
         <?php
-            if(isset($meals)) {
-                foreach ($meals as $meal): ?>
+            if(isset($meals)) {;
+                foreach ($meals as $meal):?>
                     <div id="<?= $meal->getId_meal(); ?>">
-                        <img class="meal-img" src="public/img/meal-images/<?= $meal->getImage(); ?>">
+                        <img class="meal-img" src="/public/img/meal-images/<?= $meal->getImage(); ?>">
                         <div class="meal-title">
                             <h2><?= $meal->getName(); ?></h2>
                         </div>
                         <div class="time-prepare">
                             <div class="property-meal">
                                 <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">
-                                <h3><?= $meal->getTime(); ?></h3>
+                                <h3><?= $meal->getTime(); ?> min</h3>
                             </div>
                             <div class="add-cont">
-                                <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
+                                <?php
+                                    if($meal->getType() == "vegetarian") { ?>
+                                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
+                                <?php }
+                                    if($meal->getType() == "vegan") { ?>
+                                    <img class="mini-icon" src="/public/img/vegan-icon.svg" alt="">
+                                <?php }
+                                    if($meal->getType() == "no gluten") { ?>
+                                    <img class="mini-icon" src="/public/img/no-gluten-icon.svg" alt="">
+                                <?php }
+                                    ?>
                                 <a class="addButton">add to list</a>
                             </div>
                         </div>
@@ -65,23 +75,5 @@
             }
         ?>
     </section>
-<!--    <template class="meals-template">-->
-<!--        <div id="">-->
-<!--            <img class="meal-img" src="">-->
-<!--            <div class="meal-title">-->
-<!--                <h2>name</h2>-->
-<!--            </div>-->
-<!--            <div class="time-prepare">-->
-<!--                <div class="property-meal">-->
-<!--                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">-->
-<!--                    <h3>time</h3>-->
-<!--                </div>-->
-<!--                <div class="add-cont">-->
-<!--                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">-->
-<!--                    <a class="addButton">add to list</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </template>-->
 </div>
 </body> 

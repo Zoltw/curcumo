@@ -18,20 +18,20 @@ class Meal {
     private string $description_5;
 
     public function __construct(
-        int $id_meal,
-        string $name,
-        string $type,
-        string $goal,
-        string $time,
-        string $level_diff,
-        string $products,
-        string $optional_products,
-        string $image,
-        string $description_1,
-        string $description_2,
-        string $description_3,
-        string $description_4,
-        string $description_5
+        int $id_meal = null,
+        string $name = null,
+        string $type = null,
+        string $goal = null,
+        string $time = null,
+        string $level_diff = null,
+        string $products = "",
+        string $optional_products = "",
+        string $image = "",
+        string $description_1 = "",
+        string $description_2 = "",
+        string $description_3 = "",
+        string $description_4 = "",
+        string $description_5 = ""
         ) {
 
         $this->id_meal = $id_meal;
@@ -114,7 +114,7 @@ class Meal {
         $this->optional_products = $optional_products;
     }
 
-    public function getImage(string $image) {
+    public function getImage(): string {
         return $this->image;
     }
 

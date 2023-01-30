@@ -27,13 +27,12 @@ class MealRepository extends Repository {
                 $meal['description'],
                 $meal['products'],
                 $meal['optional_products'],
-                $meal['image'],
+                $meal['image']
             );
         }
 
         public function getAllMeals(): array {
             $result = [];
-            print "jestem w getAllMeals";
             $stmt = $this->database->connect()->prepare('
                 SELECT * FROM meals
             ');
@@ -41,11 +40,15 @@ class MealRepository extends Repository {
             $meals = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($meals as $meal) {
                 $result[] = new Meal(
+                    $meal['id_meal'],
                     $meal['name'],
                     $meal['type'],
                     $meal['goal'],
                     $meal['time'],
-                    $meal['image'],
+                    $meal['level_diff'],
+                    "",
+                    "",
+                    $meal['image']
                 );
             }
             return $result;

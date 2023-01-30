@@ -1,8 +1,12 @@
 <?php
 
 require_once 'AppController.php';
+require_once __DIR__.'/../models/Meal.php';
+require_once __DIR__.'/../repository/MealRepository.php';
 
 class DefaultController extends AppController {
+
+    private MealRepository $mealRepository;
 
     public function index() {
         $this->render('start');
@@ -32,9 +36,10 @@ class DefaultController extends AppController {
         $this->render('meal');
     }
 
-    public function plan() {
-        $this->render('plan');
-    }
+//    public function plan() {
+//        $meals = $this->mealRepository->getAllMeals();
+//        $this->render('plan', ['plan' => $meals]);
+//    }
 
     public function logout() {
         setcookie("user", $_COOKIE['user'], time() - 3600, "/");
