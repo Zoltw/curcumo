@@ -20,11 +20,9 @@ class MealController extends AppController {
         }
     }
 
-    public function meal() {
-        if($this->isGet()) {
-            $meal = $this->mealRepository->getMealFromDatabase($_GET['id_meal']);
+    public function meal($id) {
+            $meal = $this->mealRepository->getMealFromDatabase($id);
             $this->render('meal', ['meal' => $meal]);
-        }
     }
 
 

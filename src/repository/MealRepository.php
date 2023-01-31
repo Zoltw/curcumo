@@ -25,14 +25,14 @@ class MealRepository extends Repository {
                 $meal['goal'],
                 $meal['time'],
                 $meal['level_diff'],
-                $meal['products'],
-                $meal['optional_products'],
+                "",
+                "",
                 $meal['image'],
                 $meal['description_1'],
                 $meal['description_2'],
                 $meal['description_3'],
-                $meal['description_4'],
-                $meal['description_5']
+                "",
+                ""
             );
         }
 
