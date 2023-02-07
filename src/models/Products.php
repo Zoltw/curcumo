@@ -2,37 +2,37 @@
 
 class Products {
 
-    private int $id_products;
-    private string $product_1;
-    private string $amount_1;
-    private string $unit_1;
-    private string $product_2;
-    private string $amount_2;
-    private string $unit_2;
-    private string $product_3;
-    private string $amount_3;
-    private string $unit_3;
-    private string $product_4;
-    private string $amount_4;
-    private string $unit_4;
-    private string $product_5;
-    private string $amount_5;
-    private string $unit_5;
-    private string $product_6;
-    private string $amount_6;
-    private string $unit_6;
-    private string $product_7;
-    private string $amount_7;
-    private string $unit_7;
-    private string $product_8;
-    private string $amount_8;
-    private string $unit_8;
-    private string $product_9;
-    private string $amount_9;
-    private string $unit_9;
-    private string $product_10;
-    private string $amount_10;
-    private string $unit_10;
+    private $id_products;
+    private  $product_1;
+    private  $amount_1;
+    private  $unit_1;
+    private  $product_2;
+    private  $amount_2;
+    private  $unit_2;
+    private  $product_3;
+    private  $amount_3;
+    private  $unit_3;
+    private $product_4;
+    private  $amount_4;
+    private  $unit_4;
+    private  $product_5;
+    private  $amount_5;
+    private  $unit_5;
+    private  $product_6;
+    private  $amount_6;
+    private  $unit_6;
+    private  $product_7;
+    private  $amount_7;
+    private  $unit_7;
+    private  $product_8;
+    private  $amount_8;
+    private  $unit_8;
+    private  $product_9;
+    private  $amount_9;
+    private  $unit_9;
+    private  $product_10;
+    private  $amount_10;
+    private  $unit_10;
 
     public function __construct(
         int $id_products = null,
@@ -121,7 +121,7 @@ class Products {
         $this->amount_1 = $amount_1;
     }
 
-    public function getUnit1(): string {
+    public function getUnit1() {
         return $this->unit_1;
     }
 
@@ -137,7 +137,7 @@ class Products {
         $this->product_2 = $product_2;
     }
 
-    public function getAmount2(): string {
+    public function getAmount2() {
         return $this->amount_2;
     }
 
@@ -145,7 +145,7 @@ class Products {
         $this->amount_2 = $amount_2;
     }
 
-    public function getUnit2(): string {
+    public function getUnit2() {
         return $this->unit_2;
     }
 
@@ -161,7 +161,7 @@ class Products {
         $this->product_3 = $product_3;
     }
 
-    public function getAmount3(): string {
+    public function getAmount3() {
         return $this->amount_3;
     }
 
@@ -169,7 +169,7 @@ class Products {
         $this->amount_3 = $amount_3;
     }
 
-    public function getUnit3(): string {
+    public function getUnit3() {
         return $this->unit_3;
     }
 
@@ -185,7 +185,7 @@ class Products {
         $this->product_4 = $product_4;
     }
 
-    public function getAmount4(): string {
+    public function getAmount4() {
         return $this->amount_4;
     }
 
@@ -193,7 +193,7 @@ class Products {
         $this->amount_4 = $amount_4;
     }
 
-    public function getUnit4(): string {
+    public function getUnit4() {
         return $this->unit_4;
     }
 
@@ -209,7 +209,7 @@ class Products {
         $this->product_5 = $product_5;
     }
 
-    public function getAmount5(): string {
+    public function getAmount5() {
         return $this->amount_5;
     }
 
@@ -217,7 +217,7 @@ class Products {
         $this->amount_5 = $amount_5;
     }
 
-    public function getUnit5(): string {
+    public function getUnit5() {
         return $this->unit_5;
     }
 
@@ -225,7 +225,7 @@ class Products {
         $this->unit_5 = $unit_5;
     }
 
-    public function getProduct6(): string {
+    public function getProduct6() {
         return $this->product_6;
     }
 
@@ -233,7 +233,7 @@ class Products {
         $this->product_6 = $product_6;
     }
 
-    public function getAmount6(): string {
+    public function getAmount6() {
         return $this->amount_6;
     }
 
@@ -241,7 +241,7 @@ class Products {
         $this->amount_6 = $amount_6;
     }
 
-    public function getUnit6(): string {
+    public function getUnit6() {
         return $this->unit_6;
     }
 
@@ -249,7 +249,7 @@ class Products {
         $this->unit_6 = $unit_6;
     }
 
-    public function getProduct7(): string {
+    public function getProduct7() {
         return $this->product_7;
     }
 
@@ -257,7 +257,7 @@ class Products {
         $this->product_7 = $product_7;
     }
 
-    public function getAmount7(): string {
+    public function getAmount7() {
         return $this->amount_7;
     }
 
@@ -265,7 +265,7 @@ class Products {
         $this->amount_7 = $amount_7;
     }
 
-    public function getUnit7(): string {
+    public function getUnit7() {
         return $this->unit_7;
     }
 
@@ -273,7 +273,7 @@ class Products {
         $this->unit_7 = $unit_7;
     }
 
-    public function getProduct8(): string {
+    public function getProduct8() {
         return $this->product_8;
     }
 
@@ -281,7 +281,7 @@ class Products {
         $this->product_8 = $product_8;
     }
 
-    public function getAmount8(): string {
+    public function getAmount8() {
         return $this->amount_8;
     }
 
@@ -289,7 +289,7 @@ class Products {
         $this->amount_8 = $amount_8;
     }
 
-    public function getUnit8(): string {
+    public function getUnit8() {
         return $this->unit_8;
     }
 
@@ -297,7 +297,7 @@ class Products {
         $this->unit_8 = $unit_8;
     }
 
-    public function getProduct9(): string {
+    public function getProduct9() {
         return $this->product_9;
     }
 
@@ -305,7 +305,7 @@ class Products {
         $this->product_9 = $product_9;
     }
 
-    public function getAmount9(): string {
+    public function getAmount9() {
         return $this->amount_9;
     }
 
@@ -313,7 +313,7 @@ class Products {
         $this->amount_9 = $amount_9;
     }
 
-    public function getUnit9(): string {
+    public function getUnit9() {
         return $this->unit_9;
     }
 
@@ -321,7 +321,7 @@ class Products {
         $this->unit_9 = $unit_9;
     }
 
-    public function getProduct10(): string {
+    public function getProduct10() {
         return $this->product_10;
     }
 
@@ -329,7 +329,7 @@ class Products {
         $this->product_10 = $product_10;
     }
 
-    public function getAmount10(): string {
+    public function getAmount10() {
         return $this->amount_10;
     }
 
@@ -337,7 +337,7 @@ class Products {
         $this->amount_10 = $amount_10;
     }
 
-    public function getUnit10(): string {
+    public function getUnit10() {
         return $this->unit_10;
     }
 

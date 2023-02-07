@@ -2,29 +2,42 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Meal.php';
+require_once __DIR__.'/../repository/UserRepository.php';
 require_once __DIR__.'/../repository/MealRepository.php';
+require_once __DIR__.'/../repository/ListRepository.php';
 
 class MealController extends AppController {
 
     private MealRepository $mealRepository;
+    private ListRepository $listRepository;
+    private UserRepository $userRepository;
 
     public function __construct() {
         parent::__construct();
         $this->mealRepository = new MealRepository();
+        $this->listRepository = new ListRepository();
+        $this->userRepository = new UserRepository();
     }
 
     public function plan() {
         if($this->isGet()) {
             $meals = $this->mealRepository->getAllMeals();
-            $this->render('plan', ['meals' => $meals]);
+            $user = $this->userRepository->getUser($_COOKIE['user'], true);
+            $number = $this->listRepository->getNumberOfMeals($user->getId());
+            $this->render('plan', ['meals' => $meals, 'number' => $number]);
         }
     }
 
-    public function meal() {
-        if($this->isGet()) {
-            $meal = $this->mealRepository->getMealFromDatabase($_GET['id_meal']);
-            $this->render('meal', ['meal' => $meal]);
-        }
+    public function meal($id) {
+        $meal = $this->mealRepository->getMealFromDatabase($id);
+        $this->render('meal', ['meal' => $meal[0], 'products' => $meal[1], 'optionals' => $meal[2]]);
+    }
+
+    public function mealList($id) {
+        $user = $this->userRepository->getUser($_COOKIE['user'], true);
+        $this->listRepository->addMealToList($id, $user->getId());
+        http_response_code(200);
+
     }
 
 

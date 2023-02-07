@@ -12,20 +12,20 @@
     display: none;
 }
 
-.meals-container>div>.meal-img {
+.meals-container>form>.meal-img {
     height: 65%;
     width: 100%;
     object-fit: cover;
     border-radius: 2em 2em 0 0;
 }
 
-.meals-container>div>.time-prepare {
+.meals-container>form>.time-prepare {
     margin-left: 1em;
     display: flex;
     justify-content: space-between;
 }
 
-.meals-container>div>.meal-title {
+.meals-container>form>.meal-title {
     height: 10%;
     font-size: 130%;
     margin-left: 0.8em;
@@ -33,21 +33,21 @@
     flex-direction: column;
 }
 
-.meals-container>div>.meal-title>h2 {
+.meals-container>form>.meal-title>h2 {
     margin: 0;
 }
 
-.meals-container>div>div>.property-meal {
+.meals-container>form>div>.property-meal {
     display: flex;
     align-items: center;
 }
 
-.meals-container>div>div>.add-cont {
+.meals-container>form>div>.add-cont {
     display: flex;
     align-items: center;
 }
 
-.meals-container>div>div>div>.clock-icon {
+.meals-container>form>div>div>.clock-icon {
     display: flex;
     width: 1.5em;
     height: 1.5em;
@@ -55,7 +55,7 @@
     margin-bottom: 0.2em;
 }
 
-.meals-container>div>div>div>.mini-icon {
+.meals-container>form>div>div>.mini-icon {
     display: flex;
     width: 2em;
     height: 2em;
@@ -63,7 +63,7 @@
     margin-bottom: 0.2em;
 }
 
-.meals-container>div>div>.addButton {
+.meals-container>form>div>.addButton {
     background: #35A35C;
     box-shadow: 0px 2.2117px 4.4234px rgba(0, 0, 0, 0.25);
     border-radius: 22.117px;
@@ -71,7 +71,7 @@
 }
 
 
-.meals-container>div {
+.meals-container>form {
     background: #FFF8EC;
     border-radius: 2em;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -106,6 +106,10 @@ a.addButton {
 
 
 /* meal-page */
+
+.backButton {
+    text-decoration: none;
+}
 
 .meal-section {
     margin: 2em 0;

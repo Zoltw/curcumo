@@ -4,12 +4,16 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
-    <script type="text/javascript" src="./public/js/addMeal.js" defer></script>
+    <script type="text/javascript" src="./public/js/addMealToList.js" defer></script>
 </head>
 <body>
 <div class="container">
     <?php
     if(isset($_COOKIE['user'])) {
+        echo $number;
+        if($number>2) {
+            header("Location: /list");
+        }
         ?>
     <div class="psc-user-container">
         <div class="psc-icons">
@@ -47,8 +51,8 @@
     <section class="meals-container">
         <?php
             if(isset($meals)) {
-                foreach ($meals as $meal):?>
-                    <div id="<?= $meal->getId_meal(); ?>" onclick="console.log('dupa')">
+                foreach ($meals as $meal): ?>
+                <form action="meal/<?= $meal->getId_meal(); ?>" method="GET">
                         <img class="meal-img" src="/public/img/meal-images/<?= $meal->getImage(); ?>">
                         <div class="meal-title">
                             <h2><?= $meal->getName(); ?></h2>
@@ -59,6 +63,9 @@
                                 <h3><?= $meal->getTime(); ?> min</h3>
                             </div>
                             <div class="add-cont">
+                                <button>
+                                    <img class="mini-icon" src="/public/img/look-meal.svg" alt="">
+                                </button>
                                 <?php
                                     if($meal->getType() == "vegetarian") { ?>
                                     <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
@@ -70,10 +77,12 @@
                                     <img class="mini-icon" src="/public/img/no-gluten-icon.svg" alt="">
                                 <?php }
                                     ?>
-                                <a class="addButton">add to list</a>
+                                <form>
+                                    <a id="<?= $meal->getId_meal(); ?>" class="addButton" onclick=changeOpacityPlateIcon()>add to list</a>
+                                </form>
                             </div>
                         </div>
-                    </div>
+                </form>
                 <?php endforeach;
             }
         ?>

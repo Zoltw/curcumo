@@ -18,7 +18,7 @@
     </div>
     <div class="back-button">
         <img class="back-icon" src="/public/img/left-arrow-icon.svg" alt="">
-        <a class="backButton">back</a>
+        <a class="backButton" href="/plan">back</a>
     </div>
     <section class="meal-section">
         <?php if(isset($meal)) {?>
@@ -41,9 +41,9 @@
                         ?>
                     </div>
                     <div class="property-meal">
-                        <img class="clock-icon" src="public/img/clock-icon.svg" alt="">
+                        <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">
                         <h3><?= $meal->getTime(); ?> min</h3>
-                        <img class="clock-icon" src="public/img/hatLogo-mini.svg" alt="">
+                        <img class="clock-icon" src="/public/img/hatLogo-mini.svg" alt="">
                         <h3><?= $meal->getLevel_diff(); ?></h3>
                     </div>
                     <p>1. <?= $meal->getDescription_1(); ?></p>
@@ -54,18 +54,24 @@
                 </div>
                 <div class="meal-products">
                     <div class="border-top">
-                        <img class="minus-icon" src="public/img/minus-icon.svg" alt="">
+                        <img class="minus-icon" src="/public/img/minus-icon.svg" alt="">
                         <p>4 servings</p>
-                        <img class="plus-icon" src="public/img/plus-icon.svg" alt="">
+                        <img class="plus-icon" src="/public/img/plus-icon.svg" alt="">
                     </div>
                     <div class="border-bottom">
                         <div>
                             <h1>Ingredients</h1>
                             <?php
-                            $ingredients = $meal->getProducts();
-                            foreach($ingredients as $ingredient) { ?>
-                                <li><?= $ingredient->getAmount(); $ingredient->getUnit();?> - <?= $ingredient->getName(); ?></li>
-                            <?php } ?>
+//                            print_r($products);
+//                            $i=1;
+                            for($i=1; $i<10; $i++) {
+                                 $amount = "getAmount".$i;
+                                 $unit = "getUnit".$i;
+                                 $name = "getProduct".$i;
+                                 if ($products->$name() != null) {
+                                ?>
+                                <li><?= $products->$amount();?> <?= $products->$unit();?> - <?= $products->$name(); ?></li>
+                            <?php } }?>
 <!--                            <li>400g - Tagiatelle pasta</li>-->
 <!--                            <li>100g - Wild garlic</li>-->
 <!--                            <li>50g - Fresh basil</li>-->
@@ -75,12 +81,11 @@
 <!--                            <li>100ml - Olive Oil</li>-->
 <!--                            <li>Pinch of salt</li>-->
 <!--                            <li>Pinch of ground black pepper</li>-->
-<!--                            <h3>Optional</h3>-->
+                            <h3>Optional</h3>
                             <?php
-                            $optionals = $meal->getOptional_products();
-                            foreach($optionals as $optional) { ?>
-                                <li><?= $optional->getAmount(); $optional->getUnit();?> - <?= $optional->getName(); ?></li>
-                            <?php } ?>
+                            ?>
+                                <li><?= $optionals->getAmount1();?> <?= $optionals->getUnit1();?> - <?= $optionals->getProduct1(); ?></li>
+                            <?php ?>
 <!--                            <li>8x Cherry tomato</li>-->
                         </div>
                         <div class="add-cont-meal">

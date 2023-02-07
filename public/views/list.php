@@ -17,7 +17,14 @@
             <img class="cook-icon" src="/public/img/cook-icon.svg" alt="">
         </div>
         <div class="user-icon">
-            <img src="/public/img/user-icon.svg" alt="">
+            <div class="dropdown">
+                <img class="button-icon-user" src="/public/img/user-icon.svg" alt="">
+                <div class="dropdown-content">
+                    <form action="logout" method="POST">
+                        <button type="submit" class="logout" onclick="location.replace('/')">Logout </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <div class="list-container">

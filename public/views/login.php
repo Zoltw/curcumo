@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="/public/img/hatLogo.svg" onclick="location.replace('/')">
+            <img src="/public/img/hatLogo.svg" onclick="location.replace('/')" alt="curcumo">
         </div>
         <div class="page-container">
             <div class="login-description">
