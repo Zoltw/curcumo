@@ -5,10 +5,17 @@ require_once __DIR__.'/../models/User.php';
 
 class UserRepository extends Repository {
 
-    public function getUser($email): ?User {
-        $stmt = $this->database->connect()->prepare('
+    public function getUser($email, $state = false): ?User {
+        if($state) {
+            $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.users WHERE md5(email) = :email
+        ');
+        }
+        else {
+            $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.users WHERE email = :email
         ');
+        }
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
 
@@ -19,11 +26,13 @@ class UserRepository extends Repository {
         }
 
         return new User(
+            $user['id_user'],
             $user['name'],
             $user['email'],
             $user['password'],
             $user['role']
         );
+
     }
 
     public function addUser(User $user) {
@@ -39,5 +48,6 @@ class UserRepository extends Repository {
             $user->getPassword()
         ]);
     }
+
 
 }

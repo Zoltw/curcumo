@@ -508,6 +508,10 @@ a.draw-button {
     margin-left: 1.5rem;
 }
 
+.icon {
+    opacity: 0.25;
+}
+
 .icon2 {
     opacity: 0.25;
 }

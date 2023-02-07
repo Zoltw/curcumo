@@ -1,16 +1,26 @@
 <?php
 
 class User {
+    private $id_user;
     private string $name;
     private string $email;
     private string $password;
     private int $role;
 
-    public function __construct(string $name, string $email, string $password, int $role) {
+    public function __construct(int $id_user, string $name, string $email, string $password, int $role) {
+        $this->id_user = $id_user;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
         $this->role = $role;
+    }
+
+    public function getId() {
+        return $this->id_user;
+    }
+
+    public function setId(int $id_user) {
+        $this->$id_user = $id_user;
     }
 
     public function getEmail(): string {

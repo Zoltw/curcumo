@@ -16,5 +16,6 @@ Router::get('meal', 'MealController');
 Router::get('plan', 'MealController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
+Router::get('mealList', 'MealController');
 
 Router::run($path);

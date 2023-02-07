@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
-    <script type="text/javascript" src="./public/js/addMeal.js" defer></script>
+    <script type="text/javascript" src="./public/js/addMealToList.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -49,32 +49,35 @@
             if(isset($meals)) {
                 foreach ($meals as $meal): ?>
                 <form action="meal/<?= $meal->getId_meal(); ?>" method="GET">
-                        <button id="<?= $meal->getId_meal(); ?>" type="submit">
-                            <img class="meal-img" src="/public/img/meal-images/<?= $meal->getImage(); ?>">
-                            <div class="meal-title">
-                                <h2><?= $meal->getName(); ?></h2>
+                        <img class="meal-img" src="/public/img/meal-images/<?= $meal->getImage(); ?>">
+                        <div class="meal-title">
+                            <h2><?= $meal->getName(); ?></h2>
+                        </div>
+                        <div class="time-prepare">
+                            <div class="property-meal">
+                                <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">
+                                <h3><?= $meal->getTime(); ?> min</h3>
                             </div>
-                            <div class="time-prepare">
-                                <div class="property-meal">
-                                    <img class="clock-icon" src="/public/img/clock-icon.svg" alt="">
-                                    <h3><?= $meal->getTime(); ?> min</h3>
-                                </div>
-                                <div class="add-cont">
-                                    <?php
-                                        if($meal->getType() == "vegetarian") { ?>
-                                        <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
-                                    <?php }
-                                        if($meal->getType() == "vegan") { ?>
-                                        <img class="mini-icon" src="/public/img/vegan-icon.svg" alt="">
-                                    <?php }
-                                        if($meal->getType() == "no gluten") { ?>
-                                        <img class="mini-icon" src="/public/img/no-gluten-icon.svg" alt="">
-                                    <?php }
-                                        ?>
-                                    <a class="addButton">add to list</a>
-                                </div>
+                            <div class="add-cont">
+                                <button>
+                                    <img class="mini-icon" src="/public/img/look-meal.svg" alt="">
+                                </button>
+                                <?php
+                                    if($meal->getType() == "vegetarian") { ?>
+                                    <img class="mini-icon" src="/public/img/vegetarian-icon.svg" alt="">
+                                <?php }
+                                    if($meal->getType() == "vegan") { ?>
+                                    <img class="mini-icon" src="/public/img/vegan-icon.svg" alt="">
+                                <?php }
+                                    if($meal->getType() == "no gluten") { ?>
+                                    <img class="mini-icon" src="/public/img/no-gluten-icon.svg" alt="">
+                                <?php }
+                                    ?>
+                                <form>
+                                    <a id="<?= $meal->getId_meal(); ?>" class="addButton" onclick=changeOpacityPlateIcon()>add to list</a>
+                                </form>
                             </div>
-                    </button>
+                        </div>
                 </form>
                 <?php endforeach;
             }
