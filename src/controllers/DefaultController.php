@@ -32,6 +32,10 @@ class DefaultController extends AppController {
         $this->render('list');
     }
 
+    public function admin() {
+        $this->render('admin');
+    }
+
 //    public function meal() {
 //        $this->render('meal');
 //    }

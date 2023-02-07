@@ -11,6 +11,7 @@ Router::get('sign', 'DefaultController');
 Router::get('pref', 'DefaultController');
 Router::get('pref_second', 'DefaultController');
 Router::get('list', 'DefaultController');
+Router::get('admin', 'DefaultController');
 Router::get('meal', 'MealController');
 Router::get('plan', 'MealController');
 Router::get('logout', 'DefaultController');
