@@ -10,17 +10,21 @@ class MealController extends AppController {
 
     private MealRepository $mealRepository;
     private ListRepository $listRepository;
+    private UserRepository $userRepository;
 
     public function __construct() {
         parent::__construct();
         $this->mealRepository = new MealRepository();
         $this->listRepository = new ListRepository();
+        $this->userRepository = new UserRepository();
     }
 
     public function plan() {
         if($this->isGet()) {
             $meals = $this->mealRepository->getAllMeals();
-            $this->render('plan', ['meals' => $meals]);
+            $user = $this->userRepository->getUser($_COOKIE['user'], true);
+            $number = $this->listRepository->getNumberOfMeals($user->getId());
+            $this->render('plan', ['meals' => $meals, 'number' => $number]);
         }
     }
 
@@ -30,8 +34,7 @@ class MealController extends AppController {
     }
 
     public function mealList($id) {
-        $userRepository = new UserRepository();
-        $user = $userRepository->getUser($_COOKIE['user'], true);
+        $user = $this->userRepository->getUser($_COOKIE['user'], true);
         $this->listRepository->addMealToList($id, $user->getId());
         http_response_code(200);
 

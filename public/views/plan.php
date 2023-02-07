@@ -10,6 +10,10 @@
 <div class="container">
     <?php
     if(isset($_COOKIE['user'])) {
+        echo $number;
+        if($number>2) {
+            header("Location: /list");
+        }
         ?>
     <div class="psc-user-container">
         <div class="psc-icons">

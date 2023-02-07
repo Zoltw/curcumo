@@ -23,7 +23,7 @@ function changeOpacityPlateIcon() {
         plateIcon2.style.opacity = "1";
     }
     else if (plato === 2) {
-        plateIcon3.style.opacity = "1";
+        window.location.href = "/list";
     }
 }
 

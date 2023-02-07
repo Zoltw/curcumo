@@ -13,4 +13,14 @@ class ListRepository extends Repository{
         $stmt->execute();
     }
 
+    public function getNumberOfMeals($id_user_list) {
+        $stmt = $this->database->connect()->prepare('
+            SELECT COUNT(*) FROM list WHERE id_user_list = :id_user_list
+        ');
+        $stmt->bindParam(':id_user_list', $id_user_list, PDO::PARAM_INT);
+        $stmt->execute();
+        $number = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $number['count'];
+    }
+
 }
