@@ -30,33 +30,36 @@
         <div class="list-container">
             <section class="list-section">
                 <h1>Your shopping list</h1>
+
                 <form>
                     <div>
                         <?php
+                        if (isset($list)) {
                         foreach($list as $key => $value) {
-                            if($key){
+                            if($key) {
                                 ?>
-                                <label class="label-container"><?=$key ?> -  <?=$value ?>
+                                <label class="label-container"><?= $key ?> - <?= $value ?>
                                     <input type="checkbox" id="checkbox" checked>
                                     <span class="checkmark"></span>
                                 </label>
                             <?php }
-                        } ?>
+                        } } ?>
                     </div>
                 </form>
                 <h3>Additional?</h3>
                 <form>
                     <div>
                         <?php
+                        if (isset($additionalList)) {
                         foreach($additionalList as $key => $value) {
-                            if($key){
+                            if($key) {
                                 ?>
-                                <label class="label-container"><?=$key ?> - <?=$value ?>
+                                <label class="label-container"><?= $key ?> - <?= $value ?>
                                     <input type="checkbox" id="checkbox" checked>
                                     <span class="checkmark"></span>
                                 </label>
                             <?php }
-                        } ?>
+                        } }?>
                     </div>
                 </form>
                 <form action="deleteList" action="POST">

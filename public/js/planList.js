@@ -14,6 +14,18 @@ function addToList() {
         });
 }
 
+function drawMeals() {
+
+    for(i = 0; i < 3; i++) {
+        let random = Math.floor(Math.random() * 8) + 1;
+        fetch(`/mealList/${random}`)
+            .then(function () {
+                i++;
+            });
+    }
+    window.location.href = "/list";
+}
+
 function changeOpacityPlateIcon() {
     if (plato === 0) {
         plateIcon1.style.opacity = "1";
