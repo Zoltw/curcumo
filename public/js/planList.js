@@ -1,6 +1,7 @@
 const addToListButton = document.querySelectorAll(".addButton");
 const plateIcon1 = document.querySelector(".icon");
 const plateIcon2 = document.querySelector(".icon2");
+const drawListButton = document.querySelector(".draw-button");
 
 plato = 0;
 
@@ -15,7 +16,6 @@ function addToList() {
 }
 
 function drawMeals() {
-
     for(i = 0; i < 3; i++) {
         let random = Math.floor(Math.random() * 8) + 1;
         fetch(`/mealList/${random}`)
@@ -40,3 +40,4 @@ function changeOpacityPlateIcon() {
 
 
 addToListButton.forEach(button => button.addEventListener("click", addToList));
+drawListButton.addEventListener("click", drawMeals);

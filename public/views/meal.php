@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
+    <script type="text/javascript" src="./public/js/meal.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -54,9 +55,9 @@
                 </div>
                 <div class="meal-products">
                     <div class="border-top">
-                        <img class="minus-icon" src="/public/img/minus-icon.svg" alt="">
-                        <p>4 servings</p>
-                        <img class="plus-icon" src="/public/img/plus-icon.svg" alt="">
+                        <img class="minus-icon" src="/public/img/minus-icon.svg" onclick=minusServing() alt="">
+                        <p class="servings">1 servings</p>
+                        <img class="plus-icon" src="/public/img/plus-icon.svg" onclick=addServing() alt="">
                     </div>
                     <div class="border-bottom">
                         <div>
