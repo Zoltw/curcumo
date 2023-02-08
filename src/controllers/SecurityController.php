@@ -36,15 +36,18 @@ class SecurityController extends AppController {
         }
         setcookie("user", md5($_POST['email']), time() + (3600 * 30), "/");
 
-        header("Location: http://$_SERVER[HTTP_HOST]/pref");
+        header("Location: http://$_SERVER[HTTP_HOST]/preferences");
     }
 
     public function register() {
         if (!$this->isPost()) {
+            echo "nie jest postem";
             return $this->render('sign');
         }
 
         $email = $_POST['email'];
+        $password = $_POST['password'];
+        $name = $_POST['name'];
         $userEmail = null;
 
         try {
@@ -53,20 +56,23 @@ class SecurityController extends AppController {
             return $this->render('sign', ['messages' => ['Something went wrong! Please try again!']]);
         }
 
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            return $this->render('registration', ['messages' => ['Bad email format!']]);
-        }
-
-        if ($_POST['email'] == null or $_POST['password'] == null or $_POST['name'] == null)
-            return $this->render('registration', ['messages' => ['All fields are required!']]);
-
         if ($userEmail) {
             return $this->render('sign', ['messages' => ['User with this email already exist!']]);
         }
 
-        $user = new User($_POST['name'], $_POST['email'], password_hash($_POST['password'], PASSWORD_BCRYPT));
+        if (empty($name) || empty($email) || empty($password)) {
+            echo $name;
+            echo $email;
+            echo $password;
+            return $this->render('sign', ['messages' => ['All fields are required!']]);
+        }
+
+
+        $user = new User((int)null, $_POST['name'], $_POST['email'], password_hash($_POST['password'], PASSWORD_BCRYPT), (int)null);
 
         $this->userRepository->addUser($user);
+
+//        header("Location: http://$_SERVER[HTTP_HOST]/login");
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }

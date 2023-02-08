@@ -20,30 +20,9 @@ class DefaultController extends AppController {
         $this->render('sign');
     }
 
-    public function pref() {
-        $this->render('pref');
+    public function preferences() {
+        $this->render('preferences');
     }
-
-    public function pref_second() {
-        $this->render('pref_second');
-    }
-
-//    public function list() {
-//        $this->render('list');
-//    }
-
-    public function admin() {
-        $this->render('admin');
-    }
-
-//    public function meal() {
-//        $this->render('meal');
-//    }
-
-//    public function plan() {
-//        $meals = $this->mealRepository->getAllMeals();
-//        $this->render('plan', ['plan' => $meals]);
-//    }
 
     public function logout() {
         setcookie("user", $_COOKIE['user'], time() - 3600, "/");

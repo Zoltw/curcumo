@@ -248,7 +248,7 @@ a.login {
     margin-left: 0.5em;
 }
 
-/*preferences (pref.php)*/
+/*preferences (preferences.php)*/
 
 .preferences-container {
     width: 1020px;
@@ -359,7 +359,7 @@ a.login {
     align-items: center;
 }
 
-a.pref {
+a.preferences {
     margin: 4em;
     width: 50%;
     font-family: 'Dongle';
@@ -829,7 +829,7 @@ section.list-section {
         margin: 0.4em;
     }
 
-    a.pref {
+    a.preferences {
         font-size: 420%;
         border-radius: 50px;
         margin: 0 4em;

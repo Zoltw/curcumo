@@ -6,6 +6,12 @@
 </head>
 <body>
     <div class="container">
+        <?php
+        if(isset($_COOKIE['user'])) {
+            header("Location: /plan");
+            die();
+        ?>
+        <?php } else { ?>
         <div class="logo">
             <img src="/public/img/hatLogo.svg" onclick="location.replace('/')" alt="curcumo">
         </div>
@@ -32,6 +38,7 @@
                 <h2>New to curcumo? <a href="sign" class="sign">Sign up</a></h2>
             </div>
         </div>
+        <?php } ?>
     </div>
 </body>
   

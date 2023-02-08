@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
-    <script type="text/javascript" src="./public/js/addMealToList.js" defer></script>
+    <script type="text/javascript" src="./public/js/planList.js" defer></script>
 </head>
 <body>
 <div class="container">

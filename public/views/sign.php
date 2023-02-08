@@ -14,8 +14,8 @@
                 <h1>sign up to curcumo</h1>
             </div>
             <div class="login-container">
-                <form class="login">
-                    <div class="message" action="register" method="POST">
+                <form class="login" action="register" method="POST">
+                    <div class="message">
                         <?php if(isset($messages)) {
                             foreach ($messages as $message) {
                                 echo $message;
