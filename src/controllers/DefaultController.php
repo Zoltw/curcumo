@@ -28,9 +28,9 @@ class DefaultController extends AppController {
         $this->render('pref_second');
     }
 
-    public function list() {
-        $this->render('list');
-    }
+//    public function list() {
+//        $this->render('list');
+//    }
 
     public function admin() {
         $this->render('admin');

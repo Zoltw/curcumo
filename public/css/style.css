@@ -414,6 +414,15 @@ a.pref {
     cursor: pointer;
 }
 
+.button-icon-user-admin {
+    color: white;
+    /*margin: 1rem 0 1rem 0;*/
+    padding: 1rem 0 1rem 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -635,6 +644,29 @@ section.list-section {
     padding-left: calc(50%);
 }
 
+  /*admin-page*/
+
+.tableColumnNames {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tableColumnData {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.tableColumnData button {
+    background: none;
+    font-family: 'Dongle';
+    height: 50%;
+    font-size: 100%;
+    color: #4F4537;
+    letter-spacing: 0.7px;
+    border-radius: 20px;
+}
 
 @media only screen and (max-device-width: 940px) {
     .user-icon {

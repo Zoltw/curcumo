@@ -10,15 +10,16 @@
 <div class="container">
     <?php
     if(isset($_COOKIE['user'])) {
-        echo $number;
-        if($number>2) {
-            header("Location: /list");
+        if (isset($number)) {
+            if($number>2) {
+                header("Location: /list");
+            }
         }
         ?>
     <div class="psc-user-container">
         <div class="psc-icons">
             <img class="plan-icon" src="/public/img/plan-list.svg" alt="">
-            <img class="shop-icon" src="/public/img/shop-icon.svg" alt="">
+            <img class="shop-icon" src="/public/img/shop-icon.svg" onclick="location.replace('/list')" alt="">
             <img class="cook-icon" src="/public/img/cook-icon.svg" alt="">
         </div>
         <div class="user-icon">

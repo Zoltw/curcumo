@@ -25,6 +25,8 @@ function changeOpacityPlateIcon() {
     else if (plato === 2) {
         window.location.href = "/list";
     }
+
+
 }
 
 
