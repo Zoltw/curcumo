@@ -32,7 +32,6 @@ class UserRepository extends Repository {
             $user['password'],
             $user['role']
         );
-
     }
 
     public function addUser(User $user) {
@@ -47,6 +46,35 @@ class UserRepository extends Repository {
             $user->getEmail(),
             $user->getPassword()
         ]);
+    }
+
+    public function getAllUsers(): array {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.users
+        ');
+        $stmt->execute();
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($users as $user) {
+            $result[] = new User(
+                $user['id_user'],
+                $user['name'],
+                $user['email'],
+                $user['password'],
+                $user['role']
+            );
+        }
+        return $result;
+    }
+
+    public function deleteUser($id_user) {
+        $stmt = $this->database->connect()->prepare('
+            DELETE FROM public.users WHERE id_user = :id_user
+        ');
+        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+        $stmt->execute();
     }
 
 

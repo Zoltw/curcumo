@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="contact-button-container">
-                <a class="contact-button">Contact us</a>
+                <a href="mailto:support@curcumo.com?" class="contact-button">Contact us</a>
             </div>
         </div>
     </div>

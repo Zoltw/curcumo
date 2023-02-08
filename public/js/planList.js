@@ -1,7 +1,6 @@
 const addToListButton = document.querySelectorAll(".addButton");
 const plateIcon1 = document.querySelector(".icon");
 const plateIcon2 = document.querySelector(".icon2");
-const plateIcon3 = document.querySelector(".icon3");
 
 plato = 0;
 
@@ -25,8 +24,6 @@ function changeOpacityPlateIcon() {
     else if (plato === 2) {
         window.location.href = "/list";
     }
-
-
 }
 
 

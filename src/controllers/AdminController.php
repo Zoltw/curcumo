@@ -16,11 +16,20 @@ class AdminController extends AppController {
     public function admin() {
         if (isset($_COOKIE['user'])) {
             $user = $this->userRepository->getUser($_COOKIE['user'], true);
-            $user->getRole() == 1 ? $this->render('admin') : $this->render('login');
+            $users = $this->userRepository->getAllUsers();
+            $user->getRole() == 1 ? $this->render('admin', ['users' => $users]) : $this->render('login');
         }
         else {
             $this->render('login');
         }
     }
 
+    public function deleteUser($id) {
+        if($this->isPost()) {
+            $users = $this->userRepository->getAllUsers();
+            $this->userRepository->deleteUser($id);
+            http_response_code(200);
+            $this->userRepository->getRole() == 1 ? $this->render('admin', ['users' => $users]) : $this->render('login');
+        }
+    }
 }

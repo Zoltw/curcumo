@@ -59,6 +59,9 @@
                         } ?>
                     </div>
                 </form>
+                <form action="deleteList" action="POST">
+                    <button class="new-list-button">New list</button>
+                </form>
             </section>
         </div>
     <?php } else {

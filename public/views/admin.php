@@ -29,11 +29,19 @@
                     <p class="EmailAdmin">Email</p>
                     <p class="ActionAdmin">Action</p>
                 </div>
-                <div class="tableColumnData">
-                    <p class="UserIdAdmin">UserID</p>
-                    <p class="EmailAdmin">Email</p>
-                    <button class="ActionButtonAdmin">Delete</button>
-                </div>
+                <?php
+                if(isset($users)) {
+                foreach ($users as $user): ?>
+                <form action="admin/<?= $user->getId(); ?>" method="GET">
+                    <div class="tableColumnData">
+                        <p class="UserIdAdmin"><?= $user->getName(); ?></p>
+                        <p class="EmailAdmin"><?= $user->getEmail(); ?></p>
+                        <form action="deleteUser/<?= $user->getId(); ?>" method="POST">
+                            <button class="ActionButtonAdmin">Delete</button>
+                        </form>
+                    </div>
+                </form>
+                <?php endforeach; }?>
             </section>
         </div>
     <?php } else {

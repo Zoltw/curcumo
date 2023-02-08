@@ -48,8 +48,7 @@
             </div>
         </div>
         <div class="contact-button-container-pref">
-            <a class="contact-button">Contact us</a>
-            <a class="contact-button">Report a bug</a>
+            <a href="mailto:support@curcumo.com?" class="contact-button">Contact us</a>
         </div>
     <?php } else {
         header("Location: /login");

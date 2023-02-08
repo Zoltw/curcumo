@@ -54,4 +54,12 @@ class ListRepository extends Repository {
         }
         return [$list,  $additionalList];
     }
+
+    public function deleteUserList($id_user_list) {
+        $stmt = $this->database->connect()->prepare('
+            DELETE FROM list WHERE id_user_list = :id_user_list
+        ');
+        $stmt->bindParam(':id_user_list', $id_user_list, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 }

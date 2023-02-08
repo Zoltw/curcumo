@@ -45,6 +45,13 @@ class MealController extends AppController {
         $this->render('list', ["list"=>$result[0], "additionalList" => $result[1]]);
     }
 
-
+    public function deleteList() {
+        $user = $this->userRepository->getUser($_COOKIE['user'], true);
+        $this->listRepository->deleteUserList($user->getId());
+        http_response_code(200);
+        $meals = $this->mealRepository->getAllMeals();
+        $number = $this->listRepository->getNumberOfMeals($user->getId());
+        $this->render('plan', ['meals' => $meals, 'number' => $number]);
+    }
 
 }
