@@ -668,6 +668,65 @@ section.list-section {
     border-radius: 20px;
 }
 
+.new-list-button {
+    width: 160%;
+    font-family: 'Dongle';
+    font-size: 100%;
+    display: flex;
+    border: none;
+    color: #FFFFFF;
+    line-height: 1.6em;
+    background: #35A35C;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    letter-spacing: 0.7px;
+}
+
+.lets-cook-button {
+    border-radius: 20px;
+    background: #4F4537;
+    color: #FFFFFF;
+    font-family: 'Dongle';
+    font-size: 100%;
+    border: none;
+    line-height: 1.6em;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    width: 4.5em;
+    margin-bottom: 0.5em;
+    margin: 0 0.5em;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.list-cook-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.back-new-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.back-button-cook {
+    display: flex;
+    font-family: 'Dongle';
+    width: 9rem;
+    height: 3.5rem;
+    border: none;
+    color: #FFFFFF;
+    background: #4F4537;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-device-width: 940px) {
     .user-icon {
         padding-left: 3rem;

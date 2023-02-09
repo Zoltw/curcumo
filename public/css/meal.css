@@ -266,6 +266,13 @@ a.addButton-meal {
     justify-content: center;
 }
 
+.look-meal-button {
+    height: 4rem;
+    width: 4rem;
+    background: none;
+    border: none;
+}
+
 @media (min-width: 2000px) {
     .meals-container {
         grid-template-columns: repeat(3, 1fr);

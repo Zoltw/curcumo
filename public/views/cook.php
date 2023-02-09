@@ -43,9 +43,15 @@
                 else { ?>
                     <h2>Choose your favourite meals!</h2>
                 <?php }?>
-                <form action="deleteList" action="POST">
-                    <button class="new-list-button">New list</button>
-                </form>
+                <div class="back-new-list">
+                    <div class="back-button-cook">
+                        <img class="back-icon" src="/public/img/left-arrow-icon.svg" alt="">
+                        <a class="backButton" onclick="location.replace('/plan')">back</a>
+                    </div>
+                    <form action="deleteList" action="POST">
+                        <button class="new-list-button">New list</button>
+                    </form>
+                </div>
             </section>
         </div>
     <?php } else {

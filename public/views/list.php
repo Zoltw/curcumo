@@ -62,10 +62,12 @@
                         } }?>
                     </div>
                 </form>
-                <form action="deleteList" action="POST">
-                    <button class="new-list-button">New list</button>
-                </form>
-                <button onclick="location.replace('/cook')">Let's cook!</button>
+                <div class="list-cook-container">
+                    <form action="deleteList" action="POST">
+                        <button class="new-list-button">New list</button>
+                    </form>
+                    <button class="lets-cook-button" onclick="location.replace('/cook')">Let's cook!</button>
+                </div>
             </section>
         </div>
     <?php } else {

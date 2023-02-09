@@ -64,7 +64,7 @@
                                 <h3><?= $meal->getTime(); ?> min</h3>
                             </div>
                             <div class="add-cont">
-                                <button>
+                                <button class="look-meal-button">
                                     <img class="mini-icon" src="/public/img/look-meal.svg" alt="">
                                 </button>
                                 <?php
