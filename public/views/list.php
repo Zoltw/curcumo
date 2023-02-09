@@ -65,6 +65,7 @@
                 <form action="deleteList" action="POST">
                     <button class="new-list-button">New list</button>
                 </form>
+                <button onclick="location.replace('/cook')">Let's cook!</button>
             </section>
         </div>
     <?php } else {
@@ -73,4 +74,4 @@
         ?>
     <?php } ?>
 </div>
-</body> 
+</body>

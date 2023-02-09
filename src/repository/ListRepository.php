@@ -21,6 +21,7 @@ class ListRepository extends Repository {
         $number = $stmt->fetch(PDO::FETCH_ASSOC);
         return $number['count'];
     }
+
     public function getList($id_user_list): array {
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM meals m1

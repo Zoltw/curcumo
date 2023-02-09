@@ -10,7 +10,7 @@ function minusServing() {
 
 }
 
-function addToListFromMeal() {
+async function addToListFromMeal() {
     const mealInList = this;
     const id = mealInList.getAttribute("id");
 
@@ -18,6 +18,10 @@ function addToListFromMeal() {
         .then(function () {
             plato++;
         });
+    setTimeout(() => {
+        window.location.href = "/plan";
+    }, 200);
+    changeOpacityPlateIcon();
 }
 
 plusIcon.addEventListener("click", addServing);

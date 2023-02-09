@@ -23,17 +23,7 @@ function drawMeals() {
                 i++;
             });
     }
-    window.location.href = "/list";
-}
-
-function addToListFromMeal() {
-    const mealInList = this;
-    const id = mealInList.getAttribute("id");
-
-    fetch(`/mealList/${id}`)
-        .then(function () {
-            plato++;
-        });
+    delayWithListRedirect();
 }
 
 function changeOpacityPlateIcon() {
@@ -44,8 +34,18 @@ function changeOpacityPlateIcon() {
         plateIcon2.style.opacity = "1";
     }
     else if (plato === 2) {
-        window.location.href = "/list";
+        delayWithListRedirect();
     }
+}
+
+function delayWithListRedirect() {
+    setTimeout(() => {
+        const reloadUsingLocationHash = () => {
+            window.location.hash = "reload";
+        }
+        window.onload = reloadUsingLocationHash();
+        window.location.href = "/list";
+    }, 300);
 }
 
 

@@ -39,7 +39,13 @@
                         <p>4. <?= $meal->getDescription_4(); ?></p>
                         <p>5. <?= $meal->getDescription_5(); ?></p>
                     </div>
-                <?php endforeach; } ?>
+                <?php endforeach; }
+                else { ?>
+                    <h2>Choose your favourite meals!</h2>
+                <?php }?>
+                <form action="deleteList" action="POST">
+                    <button class="new-list-button">New list</button>
+                </form>
             </section>
         </div>
     <?php } else {

@@ -10,6 +10,11 @@
 <div class="container">
     <?php
     if(isset($_COOKIE['user'])) {
+        if (isset($number)) {
+            if($number>2) {
+                header("Location: /list");
+            }
+        }
         ?>
     <div class="psc-user-container">
         <div class="draw-description">
@@ -55,9 +60,9 @@
                 </div>
                 <div class="meal-products">
                     <div class="border-top">
-                        <img class="minus-icon" src="/public/img/minus-icon.svg" onclick=minusServing() alt="">
+                        <img class="minus-icon" src="/public/img/minus-icon.svg" alt="">
                         <p class="servings">1 servings</p>
-                        <img class="plus-icon" src="/public/img/plus-icon.svg" onclick=addServing() alt="">
+                        <img class="plus-icon" src="/public/img/plus-icon.svg" alt="">
                     </div>
                     <div class="border-bottom">
                         <div>
