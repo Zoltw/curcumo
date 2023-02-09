@@ -13,7 +13,7 @@
         <div class="psc-user-container">
             <div class="user-icon">
                 <div class="dropdown">
-                    <img class="button-icon-user" src="/public/img/user-icon.svg" alt="">
+                    <img class="button-icon-user-admin" src="/public/img/user-icon.svg" alt="">
                     <div class="dropdown-content">
                         <form action="logout" method="POST">
                             <button type="submit" class="logout" onclick="location.replace('/')">Logout </button>
@@ -24,56 +24,22 @@
         </div>
         <div class="list-container">
             <section class="list-section">
-                <h1>Your shopping list</h1>
-                <form>
-                    <div>
-                        <label class="label-container">400g - Tagiatelle pasta
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">100g - Wild Garlic
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">50g - Fresh basil
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">30g - Cashew
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">30g - Sunflower seeds
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">70g - Parmeggiano regano
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
+                <div class="tableColumnNames">
+                    <p class="UserIdAdmin">UserID</p>
+                    <p class="EmailAdmin">Email</p>
+                    <p class="ActionAdmin">Action</p>
+                </div>
+                <?php
+                if(isset($users)) {
+                foreach ($users as $user): ?>
+                    <div id="<?= $user->getId(); ?>" class="tableColumnData">
+                        <p class="UserIdAdmin"><?= $user->getName(); ?></p>
+                        <p class="EmailAdmin"><?= $user->getEmail(); ?></p>
+                        <form action="deleteUser/<?= $user->getId(); ?>" method="POST">
+                            <button class="ActionButtonAdmin">Delete</button>
+                        </form>
                     </div>
-                </form>
-                <h3>Additional?</h3>
-                <form>
-                    <div>
-                        <label class="label-container">8x Cherry tomato
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">100ml - Olive Oil
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">Pinch of salt
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="label-container">Pinch of black pepper
-                            <input type="checkbox" id="checkbox" checked>
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                </form>
+                <?php endforeach; }?>
             </section>
         </div>
     <?php } else {

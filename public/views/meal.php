@@ -4,11 +4,17 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
+    <script type="text/javascript" src="/public/js/meal.js" defer></script>
 </head>
 <body>
 <div class="container">
     <?php
     if(isset($_COOKIE['user'])) {
+        if (isset($number)) {
+            if($number>2) {
+                header("Location: /list");
+            }
+        }
         ?>
     <div class="psc-user-container">
         <div class="draw-description">
@@ -55,41 +61,27 @@
                 <div class="meal-products">
                     <div class="border-top">
                         <img class="minus-icon" src="/public/img/minus-icon.svg" alt="">
-                        <p>4 servings</p>
+                        <p class="servings">1 servings</p>
                         <img class="plus-icon" src="/public/img/plus-icon.svg" alt="">
                     </div>
                     <div class="border-bottom">
                         <div>
                             <h1>Ingredients</h1>
                             <?php
-//                            print_r($products);
-//                            $i=1;
-                            for($i=1; $i<10; $i++) {
-                                 $amount = "getAmount".$i;
-                                 $unit = "getUnit".$i;
-                                 $name = "getProduct".$i;
-                                 if ($products->$name() != null) {
-                                ?>
-                                <li><?= $products->$amount();?> <?= $products->$unit();?> - <?= $products->$name(); ?></li>
-                            <?php } }?>
-<!--                            <li>400g - Tagiatelle pasta</li>-->
-<!--                            <li>100g - Wild garlic</li>-->
-<!--                            <li>50g - Fresh basil</li>-->
-<!--                            <li>30g - Cashew</li>-->
-<!--                            <li>30g - Sunflower seeds</li>-->
-<!--                            <li>70g - Pargeggiano regano</li>-->
-<!--                            <li>100ml - Olive Oil</li>-->
-<!--                            <li>Pinch of salt</li>-->
-<!--                            <li>Pinch of ground black pepper</li>-->
+                                for($i=1; $i<10; $i++) {
+                                     $amount = "getAmount".$i;
+                                     $unit = "getUnit".$i;
+                                     $name = "getProduct".$i;
+                                     if(isset($products)) {
+                                     if ($products->$name() != null) { ?>
+                                        <li><?= $products->$amount();?> <?= $products->$unit();?> - <?= $products->$name(); ?></li>
+                                     <?php } }
+                                } if(isset($optionals)) {?>
                             <h3>Optional</h3>
-                            <?php
-                            ?>
-                                <li><?= $optionals->getAmount1();?> <?= $optionals->getUnit1();?> - <?= $optionals->getProduct1(); ?></li>
-                            <?php ?>
-<!--                            <li>8x Cherry tomato</li>-->
+                                <li><?= $optionals->getAmount1();?> <?= $optionals->getUnit1();?> - <?= $optionals->getProduct1(); }?></li>
                         </div>
                         <div class="add-cont-meal">
-                            <a class="addButton-meal">add to list</a>
+                            <a id="<?= $meal->getId_meal(); ?>" class="addButton-meal" >add to list</a>
                         </div>
                     </div>
                 </div>

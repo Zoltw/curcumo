@@ -32,18 +32,18 @@
                 </div>
                 <div class="start-page-icons">
                     <div class="start-page-plan-icon">
-                        <img src="/public/img/plan-list.svg">
+                        <img src="/public/img/plan-list.svg" alt="plan your list">
                     </div>
                     <div class="start-page-shop-icon">
-                        <img src="/public/img/shop-icon.svg" alt="">
+                        <img src="/public/img/shop-icon.svg" alt="list">
                     </div>
                     <div class="start-page-cook-icon">
-                        <img src="/public/img/cook-icon.svg" alt="">
+                        <img src="/public/img/cook-icon.svg" alt="cook">
                     </div>
                 </div>
             </div>
             <div class="contact-button-container">
-                <a class="contact-button">Contact us</a>
+                <a href="mailto:support@curcumo.com?" class="contact-button">Contact us</a>
             </div>
         </div>
     </div>

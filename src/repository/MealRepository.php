@@ -19,7 +19,8 @@ class MealRepository extends Repository {
             $stmt->execute();
 
             $meal = $stmt->fetch(PDO::FETCH_ASSOC);
-            $product = new Products($meal['id_products'],
+            $product = new Products(
+                $meal['id_products'],
                 $meal['product_1'],
                 $meal['amount_1'],
                 $meal['unit_1'],
@@ -49,12 +50,15 @@ class MealRepository extends Repository {
                 $meal['unit_9'],
                 $meal['product_10'],
                 $meal['amount_10'],
-                $meal['unit_10']);
+                $meal['unit_10']
+            );
 
-            $optionals = new OptionalProducts($meal['id_optional'],
+            $optionals = new OptionalProducts(
+                $meal['id_optional'],
                 $meal['product_o_1'],
                 $meal['amount_o_1'],
-                $meal['unit_o_1']);
+                $meal['unit_o_1']
+            );
 
 
             if (!$meal) {
@@ -86,6 +90,7 @@ class MealRepository extends Repository {
             ');
             $stmt->execute();
             $meals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
             foreach ($meals as $meal) {
                 $result[] = new Meal(
                     $meal['id_meal'],
@@ -94,11 +99,12 @@ class MealRepository extends Repository {
                     $meal['goal'],
                     $meal['time'],
                     $meal['level_diff'],
-                    "",
-                    "",
+                    $meal['products'],
+                    $meal['optional_products'],
                     $meal['image']
                 );
             }
             return $result;
         }
+
 }

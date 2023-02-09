@@ -4,22 +4,23 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
-    <script type="text/javascript" src="./public/js/addMealToList.js" defer></script>
+    <script type="text/javascript" src="./public/js/planList.js" defer></script>
 </head>
 <body>
 <div class="container">
     <?php
     if(isset($_COOKIE['user'])) {
-        echo $number;
-        if($number>2) {
-            header("Location: /list");
+        if (isset($number)) {
+            if($number>2) {
+                header("Location: /list");
+            }
         }
         ?>
     <div class="psc-user-container">
         <div class="psc-icons">
             <img class="plan-icon" src="/public/img/plan-list.svg" alt="">
-            <img class="shop-icon" src="/public/img/shop-icon.svg" alt="">
-            <img class="cook-icon" src="/public/img/cook-icon.svg" alt="">
+            <img class="shop-icon" src="/public/img/shop-icon.svg" onclick="location.replace('/list')" alt="">
+            <img class="cook-icon" src="/public/img/cook-icon.svg" onclick="location.replace('/cook')" alt="">
         </div>
         <div class="user-icon">
             <div class="dropdown">
