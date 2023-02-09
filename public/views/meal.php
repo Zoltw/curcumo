@@ -5,6 +5,7 @@
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
     <script type="text/javascript" src="./public/js/meal.js" defer></script>
+    <script type="text/javascript" src="./public/js/planList.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -75,7 +76,7 @@
                                 <li><?= $optionals->getAmount1();?> <?= $optionals->getUnit1();?> - <?= $optionals->getProduct1(); ?></li>
                         </div>
                         <div class="add-cont-meal">
-                            <a class="addButton-meal">add to list</a>
+                            <a id="<?= $meal->getId_meal(); ?>" class="addButton-meal" >add to list</a>
                         </div>
                     </div>
                 </div>

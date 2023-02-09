@@ -54,4 +54,10 @@ class MealController extends AppController {
         $this->render('plan', ['meals' => $meals, 'number' => $number]);
     }
 
+    public function cook() {
+        $user = $this->userRepository->getUser($_COOKIE['user'], true);
+        $result= $this->listRepository->getList($user->getId());
+        $this->render('cook', ["list"=>$result[0], "additionalList" => $result[1]]);
+    }
+
 }

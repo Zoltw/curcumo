@@ -16,7 +16,11 @@ class MealRepository extends Repository {
                     WHERE id_meal = :id_meal
             ');
             $stmt->bindParam(':id_meal', $id_meal, PDO::PARAM_INT);
-            $stmt->execute();
+            try {
+                $stmt->execute();
+            } catch (PDOException $e) {
+                return [];
+            }
 
             $meal = $stmt->fetch(PDO::FETCH_ASSOC);
             $product = new Products($meal['id_products'],

@@ -17,6 +17,7 @@ Router::get('admin', 'AdminController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
 Router::get('mealList', 'MealController');
+Router::get('cook', 'MealController');
 Router::post('deleteUser', 'AdminController');
 Router::post('deleteList', 'MealController');
 

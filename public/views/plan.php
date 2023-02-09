@@ -20,7 +20,7 @@
         <div class="psc-icons">
             <img class="plan-icon" src="/public/img/plan-list.svg" alt="">
             <img class="shop-icon" src="/public/img/shop-icon.svg" onclick="location.replace('/list')" alt="">
-            <img class="cook-icon" src="/public/img/cook-icon.svg" alt="">
+            <img class="cook-icon" src="/public/img/cook-icon.svg" onclick="location.replace('/cook')" alt="">
         </div>
         <div class="user-icon">
             <div class="dropdown">
