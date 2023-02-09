@@ -9,8 +9,11 @@ function addToList() {
     const mealInList = this;
     const id = mealInList.getAttribute("id");
 
-    fetch(`/mealList/${id}`)
-        .then(function () {
+    fetch(`/mealList/${id}`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+    }}).then(function () {
             plato++;
         });
 }
@@ -18,8 +21,11 @@ function addToList() {
 function drawMeals() {
     for(i = 0; i < 3; i++) {
         random = Math.floor(Math.random() * 8) + 1;
-        fetch(`/mealList/${random}`)
-            .then(function () {
+        fetch(`/mealList/${random}`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+        }}).then(function () {
                 i++;
             });
     }
