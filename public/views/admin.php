@@ -32,15 +32,13 @@
                 <?php
                 if(isset($users)) {
                 foreach ($users as $user): ?>
-                <form action="admin/<?= $user->getId(); ?>" method="GET">
-                    <div class="tableColumnData">
+                    <div id="<?= $user->getId(); ?>" class="tableColumnData">
                         <p class="UserIdAdmin"><?= $user->getName(); ?></p>
                         <p class="EmailAdmin"><?= $user->getEmail(); ?></p>
                         <form action="deleteUser/<?= $user->getId(); ?>" method="POST">
                             <button class="ActionButtonAdmin">Delete</button>
                         </form>
                     </div>
-                </form>
                 <?php endforeach; }?>
             </section>
         </div>

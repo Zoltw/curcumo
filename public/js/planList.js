@@ -1,5 +1,4 @@
 const addToListButton = document.querySelectorAll(".addButton");
-const addToListFromMealButton = document.querySelectorAll(".addButton-meal");
 const plateIcon1 = document.querySelector(".icon");
 const plateIcon2 = document.querySelector(".icon2");
 const drawListButton = document.querySelector(".draw-button");
@@ -18,7 +17,7 @@ function addToList() {
 
 function drawMeals() {
     for(i = 0; i < 3; i++) {
-        let random = Math.floor(Math.random() * 8) + 1;
+        random = Math.floor(Math.random() * 8) + 1;
         fetch(`/mealList/${random}`)
             .then(function () {
                 i++;
@@ -34,8 +33,6 @@ function addToListFromMeal() {
     fetch(`/mealList/${id}`)
         .then(function () {
             plato++;
-            changeOpacityPlateIcon();
-            window.location.href = "/plan";
         });
 }
 
@@ -53,5 +50,4 @@ function changeOpacityPlateIcon() {
 
 
 addToListButton.forEach(button => button.addEventListener("click", addToList));
-addToListFromMealButton.forEach(button => button.addEventListener("click", addToList));
 drawListButton.addEventListener("click", drawMeals);

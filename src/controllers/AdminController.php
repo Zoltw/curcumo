@@ -26,10 +26,10 @@ class AdminController extends AppController {
 
     public function deleteUser($id) {
         if($this->isPost()) {
-            $users = $this->userRepository->getAllUsers();
+            $id = (int)$id;
             $this->userRepository->deleteUser($id);
-            http_response_code(200);
-            $this->userRepository->getRole() == 1 ? $this->render('admin', ['users' => $users]) : $this->render('login');
+            $this->userRepository->getAllUsers();
+            header("Location: /admin");
         }
     }
 }

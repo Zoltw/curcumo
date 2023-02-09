@@ -4,8 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
-    <script type="text/javascript" src="./public/js/meal.js" defer></script>
-    <script type="text/javascript" src="./public/js/planList.js" defer></script>
+    <script type="text/javascript" src="/public/js/meal.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -68,12 +67,13 @@
                                      $amount = "getAmount".$i;
                                      $unit = "getUnit".$i;
                                      $name = "getProduct".$i;
+                                     if(isset($products)) {
                                      if ($products->$name() != null) { ?>
                                         <li><?= $products->$amount();?> <?= $products->$unit();?> - <?= $products->$name(); ?></li>
-                                     <?php }
-                                }?>
+                                     <?php } }
+                                } if(isset($optionals)) {?>
                             <h3>Optional</h3>
-                                <li><?= $optionals->getAmount1();?> <?= $optionals->getUnit1();?> - <?= $optionals->getProduct1(); ?></li>
+                                <li><?= $optionals->getAmount1();?> <?= $optionals->getUnit1();?> - <?= $optionals->getProduct1(); }?></li>
                         </div>
                         <div class="add-cont-meal">
                             <a id="<?= $meal->getId_meal(); ?>" class="addButton-meal" >add to list</a>

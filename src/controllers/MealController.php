@@ -29,6 +29,7 @@ class MealController extends AppController {
     }
 
     public function meal($id) {
+        $id = (int)$id;
         $meal = $this->mealRepository->getMealFromDatabase($id);
         $this->render('meal', ['meal' => $meal[0], 'products' => $meal[1], 'optionals' => $meal[2]]);
     }
@@ -42,22 +43,21 @@ class MealController extends AppController {
     public function list($id) {
         $user = $this->userRepository->getUser($_COOKIE['user'], true);
         $result= $this->listRepository->getList($user->getId());
-        $this->render('list', ["list"=>$result[0], "additionalList" => $result[1]]);
+        $this->render('list', ["list" => $result[0], "additionalList" => $result[1]]);
     }
 
     public function deleteList() {
         $user = $this->userRepository->getUser($_COOKIE['user'], true);
         $this->listRepository->deleteUserList($user->getId());
         http_response_code(200);
-        $meals = $this->mealRepository->getAllMeals();
-        $number = $this->listRepository->getNumberOfMeals($user->getId());
-        $this->render('plan', ['meals' => $meals, 'number' => $number]);
+        $this->mealRepository->getAllMeals();
+        $this->listRepository->getNumberOfMeals($user->getId());
+        header("Location: /plan");
     }
 
     public function cook() {
         $user = $this->userRepository->getUser($_COOKIE['user'], true);
-        $result= $this->listRepository->getList($user->getId());
-        $this->render('cook', ["list"=>$result[0], "additionalList" => $result[1]]);
+        $meals = $this->listRepository->cookMealFromList($user->getId());
+        $this->render('cook', ['meals' => $meals]);
     }
-
 }

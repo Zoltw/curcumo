@@ -29,8 +29,17 @@
         </div>
         <div class="list-container">
             <section class="list-section">
-                <h1>Your shopping list</h1>
-
+                <?php if(isset($meals)) {
+                    foreach ($meals as $meal): ?>
+                    <div id="<?= $meal->getId_meal(); ?>">
+                        <h2><?= $meal->getName(); ?></h2>
+                        <p>1. <?= $meal->getDescription_1(); ?></p>
+                        <p>2. <?= $meal->getDescription_2(); ?></p>
+                        <p>3. <?= $meal->getDescription_3(); ?></p>
+                        <p>4. <?= $meal->getDescription_4(); ?></p>
+                        <p>5. <?= $meal->getDescription_5(); ?></p>
+                    </div>
+                <?php endforeach; } ?>
             </section>
         </div>
     <?php } else {

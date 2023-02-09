@@ -21,12 +21,10 @@ class ListRepository extends Repository {
         $number = $stmt->fetch(PDO::FETCH_ASSOC);
         return $number['count'];
     }
-    public function getList($id_user_list)
-    {
+    public function getList($id_user_list): array {
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM meals m1
-                INNER JOIN (SELECT id_meal_list
-                                FROM public.list m1
+                INNER JOIN (SELECT id_meal_list FROM public.list m1
                                 WHERE id_user_list = :id_user_list) l on m1.id_meal = l.id_meal_list
                 INNER JOIN products on m1.products = products.id_products
                 INNER JOIN optional_products on m1.optional_products = optional_products.id_optional;
@@ -61,5 +59,37 @@ class ListRepository extends Repository {
         ');
         $stmt->bindParam(':id_user_list', $id_user_list, PDO::PARAM_INT);
         $stmt->execute();
+    }
+
+    public function cookMealFromList($id_user_list): array {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM meals m1
+                INNER JOIN (SELECT id_meal_list FROM public.list m1
+                                WHERE id_user_list = :id_user_list) l on m1.id_meal = l.id_meal_list
+        ');
+        $stmt->bindParam(':id_user_list', $id_user_list, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $meals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($meals as $meal) {
+            $result[] = new Meal(
+                $meal['id_meal'],
+                $meal['name'],
+                $meal['type'],
+                $meal['goal'],
+                $meal['time'],
+                $meal['level_diff'],
+                $meal['products'],
+                $meal['optional_products'],
+                $meal['image'],
+                $meal['description_1'],
+                $meal['description_2'],
+                $meal['description_3'],
+                $meal['description_4'],
+                $meal['description_5']
+            );
+        }
+        return $result;
     }
 }
