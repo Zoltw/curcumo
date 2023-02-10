@@ -2,8 +2,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
-    <title>check your list</title>
+    <title>let's cook!</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
+    <script type="text/javascript" src="./public/js/logout.js" defer></script>
 </head>
 <body>
 <div class="container-list">
@@ -17,14 +18,14 @@
                 <img class="cook-icon" src="/public/img/cook-icon.svg" style="opacity: 1" alt="">
             </div>
             <div class="user-icon">
-                <div class="dropdown">
-                    <img class="button-icon-user" src="/public/img/user-icon.svg" alt="">
-                    <div class="dropdown-content">
-                        <form action="logout" method="POST">
-                            <button type="submit" class="logout" onclick="location.replace('/')">Logout </button>
-                        </form>
+                <form action="logout" method="POST">
+                    <div class="dropdown">
+                        <img class="dropbtn" src="/public/img/user-icon.svg" onclick=dropDownListLogout() alt="">
+                        <div id="dropdownUserLogout" class="dropdown-content">
+                            <button class="logout" onclick="location.replace('/')">Logout</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="list-container">
@@ -43,9 +44,15 @@
                 else { ?>
                     <h2>Choose your favourite meals!</h2>
                 <?php }?>
-                <form action="deleteList" action="POST">
-                    <button class="new-list-button">New list</button>
-                </form>
+                <div class="back-new-list">
+                    <div class="back-button-cook">
+                        <img class="back-icon" src="/public/img/left-arrow-icon.svg" alt="">
+                        <a class="backButton" onclick="location.replace('/plan')">back</a>
+                    </div>
+                    <form action="deleteList" action="POST">
+                        <button class="new-list-button">New list</button>
+                    </form>
+                </div>
             </section>
         </div>
     <?php } else {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-    <title>get started</title>
+    <title>curcumo</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
 </head>
 <body>

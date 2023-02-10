@@ -5,6 +5,7 @@
     <title>plan your meals</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
     <script type="text/javascript" src="./public/js/planList.js" defer></script>
+    <script type="text/javascript" src="./public/js/logout.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -19,18 +20,18 @@
     <div class="psc-user-container">
         <div class="psc-icons">
             <img class="plan-icon" src="/public/img/plan-list.svg" alt="">
-            <img class="shop-icon" src="/public/img/shop-icon.svg" onclick="location.replace('/list')" alt="">
-            <img class="cook-icon" src="/public/img/cook-icon.svg" onclick="location.replace('/cook')" alt="">
+            <img class="shop-icon" src="/public/img/shop-icon.svg" alt="">
+            <img class="cook-icon" src="/public/img/cook-icon.svg" alt="">
         </div>
         <div class="user-icon">
-            <div class="dropdown">
-                <img class="button-icon-user" src="/public/img/user-icon.svg" alt="">
-                <div class="dropdown-content">
-                    <form action="logout" method="POST">
-                        <button type="submit" class="logout" onclick="location.replace('/')">Logout </button>
-                    </form>
+            <form action="logout" method="POST">
+                <div class="dropdown">
+                    <img class="dropbtn" src="/public/img/user-icon.svg" onclick=dropDownListLogout() alt="">
+                    <div id="dropdownUserLogout" class="dropdown-content">
+                        <button class="logout" onclick="location.replace('/')">Logout</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <div class="plan-page-container">
@@ -64,7 +65,7 @@
                                 <h3><?= $meal->getTime(); ?> min</h3>
                             </div>
                             <div class="add-cont">
-                                <button>
+                                <button class="look-meal-button">
                                     <img class="mini-icon" src="/public/img/look-meal.svg" alt="">
                                 </button>
                                 <?php

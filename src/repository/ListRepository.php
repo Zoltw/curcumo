@@ -73,23 +73,27 @@ class ListRepository extends Repository {
         $stmt->execute();
 
         $meals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $name = [];
         foreach ($meals as $meal) {
-            $result[] = new Meal(
-                $meal['id_meal'],
-                $meal['name'],
-                $meal['type'],
-                $meal['goal'],
-                $meal['time'],
-                $meal['level_diff'],
-                $meal['products'],
-                $meal['optional_products'],
-                $meal['image'],
-                $meal['description_1'],
-                $meal['description_2'],
-                $meal['description_3'],
-                $meal['description_4'],
-                $meal['description_5']
-            );
+            if(!in_array($meal['name'], $name)) {
+                $result[] = new Meal(
+                    $meal['id_meal'],
+                    $meal['name'],
+                    $meal['type'],
+                    $meal['goal'],
+                    $meal['time'],
+                    $meal['level_diff'],
+                    $meal['products'],
+                    $meal['optional_products'],
+                    $meal['image'],
+                    $meal['description_1'],
+                    $meal['description_2'],
+                    $meal['description_3'],
+                    $meal['description_4'],
+                    $meal['description_5']
+                );
+                $name[] = $meal['name'];
+            }
         }
         return $result;
     }

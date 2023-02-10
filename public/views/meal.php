@@ -24,7 +24,7 @@
     </div>
     <div class="back-button">
         <img class="back-icon" src="/public/img/left-arrow-icon.svg" alt="">
-        <a class="backButton" href="/plan">back</a>
+        <a class="backButton" onclick="location.replace('/plan')">back</a>
     </div>
     <section class="meal-section">
         <?php if(isset($meal)) {?>
@@ -61,7 +61,7 @@
                 <div class="meal-products">
                     <div class="border-top">
                         <img class="minus-icon" src="/public/img/minus-icon.svg" alt="">
-                        <p class="servings">1 servings</p>
+                        <p class="servings">1</p>servings
                         <img class="plus-icon" src="/public/img/plus-icon.svg" alt="">
                     </div>
                     <div class="border-bottom">

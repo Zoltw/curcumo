@@ -2,7 +2,7 @@ const prefButton = document.querySelector(".preferences");
 
 function managePref() {
     const template = document.querySelector("#pref-template")
-    document.querySelector(".preferences-container").innerHTML="";
+    document.querySelector(".container").innerHTML="";
     const clone = template.content.cloneNode(true);
     header = clone.querySelector("h1");
     header.innerHTML = "I would like to eat..."
@@ -24,8 +24,17 @@ function managePref() {
     b.innerHTML = "more fishes";
     a = clone.querySelector(".preferences");
     a.innerHTML ="let's plan!";
-    document.querySelector(".preferences-container").appendChild(clone);
+    document.querySelector(".container").appendChild(clone);
 
+}
+
+function changeBackground(x) {
+    if (x.style.background === "rgb(216, 216, 216)") {
+        x.style.background = "#FFFFFF";
+    }
+    else {
+        x.style.background = "#D8D8D8";
+    }
 }
 
 prefButton.addEventListener("click", managePref);

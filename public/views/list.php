@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/meal.css">
     <title>check your list</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
+    <script type="text/javascript" src="./public/js/logout.js" defer></script>
 </head>
 <body>
 <div class="container-list">
@@ -17,14 +18,14 @@
                 <img class="cook-icon" src="/public/img/cook-icon.svg" onclick="location.replace('/cook')" alt="">
             </div>
             <div class="user-icon">
-                <div class="dropdown">
-                    <img class="button-icon-user" src="/public/img/user-icon.svg" alt="">
-                    <div class="dropdown-content">
-                        <form action="logout" method="POST">
-                            <button type="submit" class="logout" onclick="location.replace('/')">Logout </button>
-                        </form>
+                <form action="logout" method="POST">
+                    <div class="dropdown">
+                        <img class="dropbtn" src="/public/img/user-icon.svg" onclick=dropDownListLogout() alt="">
+                        <div id="dropdownUserLogout" class="dropdown-content">
+                            <button class="logout" onclick="location.replace('/')">Logout</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="list-container">
@@ -62,10 +63,12 @@
                         } }?>
                     </div>
                 </form>
-                <form action="deleteList" action="POST">
-                    <button class="new-list-button">New list</button>
-                </form>
-                <button onclick="location.replace('/cook')">Let's cook!</button>
+                <div class="list-cook-container">
+                    <form action="deleteList" action="POST">
+                        <button class="new-list-button">New list</button>
+                    </form>
+                    <button class="lets-cook-button" onclick="location.replace('/cook')">Let's cook!</button>
+                </div>
             </section>
         </div>
     <?php } else {

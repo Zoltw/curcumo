@@ -1,27 +1,39 @@
 const plusIcon = document.querySelector(".plus-icon");
 const minusIcon = document.querySelector(".minus-icon");
 const addToListFromMealButton = document.querySelectorAll(".addButton-meal");
+const servingNumber = document.querySelector(".servings");
+
+i = 1;
 
 function addServing() {
-    console.log("add serving");
+    servingNumber.innerHTML = parseInt(servingNumber.innerHTML) + 1;
+    i++;
 }
 
 function minusServing() {
-
+    if (servingNumber.innerHTML > 1) {
+        servingNumber.innerHTML = parseInt(servingNumber.innerHTML) - 1;
+        i--;
+    }
 }
 
-async function addToListFromMeal() {
+function addToListFromMeal() {
     const mealInList = this;
     const id = mealInList.getAttribute("id");
 
-    fetch(`/mealList/${id}`)
-        .then(function () {
-            plato++;
-        });
+    while(i > 0) { 
+        fetch(`/mealList/${id}`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+        }}).then(function () {
+            });
+            i--;
+    }
     setTimeout(() => {
-        window.location.href = "/plan";
-    }, 200);
-    changeOpacityPlateIcon();
+            window.location.href = "/plan";
+        }, 200
+    );
 }
 
 plusIcon.addEventListener("click", addServing);

@@ -1,15 +1,8 @@
+const form = document.querySelector("form");
+const emailInput = form.querySelector('input[name="email"]');
+
 function isEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
-}
-
-
-function changeBackground(x) {
-    if (x.style.background === "rgb(216, 216, 216)") {
-        x.style.background = "#FFFFFF";
-    }
-    else {
-        x.style.background = "#D8D8D8";
-    }
 }
 
 function markValidation(element, condition) {
@@ -24,3 +17,4 @@ function validateEmail() {
     );
 }
 
+emailInput.addEventListener('keyup', validateEmail);
