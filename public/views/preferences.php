@@ -3,7 +3,6 @@
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <title>choose your preferences</title>
     <link rel="icon" href="/public/img/curcumo-logo.png" type="image/icon type">
-    <script type="text/javascript" src="./public/js/script.js" defer></script>
     <script type="text/javascript" src="./public/js/preferences.js" defer></script>
 </head>
 <body>

@@ -11,9 +11,9 @@ class MealRepository extends Repository {
             $stmt = $this->database->connect()->prepare('
                 SELECT * 
                     FROM public.meals m1
-                    INNER JOIN products on m1.products = products.id_products
-                    INNER JOIN optional_products on m1.optional_products = optional_products.id_optional
-                    WHERE id_meal = :id_meal
+                        INNER JOIN products on m1.products = products.id_products
+                        INNER JOIN optional_products on m1.optional_products = optional_products.id_optional
+                        WHERE id_meal = :id_meal
             ');
             $stmt->bindParam(':id_meal', $id_meal, PDO::PARAM_INT);
             $stmt->execute();

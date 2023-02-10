@@ -31,8 +31,9 @@ function addToListFromMeal() {
             i--;
     }
     setTimeout(() => {
-        window.location.href = "/plan";
-    }, 200);
+            window.location.href = "/plan";
+        }, 200
+    );
 }
 
 plusIcon.addEventListener("click", addServing);

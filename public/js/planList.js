@@ -43,12 +43,13 @@ function changeOpacityPlateIcon() {
 
 function delayWithListRedirect() {
     setTimeout(() => {
-        const reloadUsingLocationHash = () => {
-            window.location.hash = "reload";
-        }
-        window.onload = reloadUsingLocationHash();
-        window.location.href = "/list";
-    }, 300);
+            const reloadUsingLocationHash = () => {
+                window.location.hash = "reload";
+            }
+            window.onload = reloadUsingLocationHash();
+            window.location.href = "/list";
+        }, 200
+    );
 }
 
 addToListButton.forEach(button => button.addEventListener("click", addToList));
