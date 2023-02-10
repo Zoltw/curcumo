@@ -59,6 +59,9 @@
 </body>
 
 <template id="pref-template">
+    <div class="logo">
+        <img src="/public/img/hatLogo.svg" onclick="location.replace('/')">
+    </div>
     <div class="preferences-container">
         <div class="pref-description">
             <h1></h1>
@@ -90,5 +93,8 @@
         <div class="pref-button">
             <a href="plan" class="preferences"></a>
         </div>
+    </div>
+    <div class="contact-button-container-pref">
+        <a href="mailto:support@curcumo.com?" class="contact-button">Contact us</a>
     </div>
 </template>
