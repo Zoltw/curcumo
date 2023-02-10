@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    /*overflow: auto;*/
 }
 
 @font-face {
@@ -144,6 +143,7 @@ a.contact-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .page-container {
@@ -210,6 +210,7 @@ button.login {
     background: #35A35C;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .sign-description {
@@ -304,6 +305,7 @@ a.login {
     justify-content: space-evenly;
     margin: 0 1em;
     font-size: 200%;
+    cursor: pointer;
 }
 
 .second-icon {
@@ -318,6 +320,7 @@ a.login {
     justify-content: space-evenly;
     margin: 0 1em;
     font-size: 200%;
+    cursor: pointer;
 }
 
 .second-section {
@@ -336,6 +339,7 @@ a.login {
     justify-content: space-evenly;
     margin: 0 1em;
     font-size: 200%;
+    cursor: pointer;
 }
 
 .fourth-icon {
@@ -350,6 +354,7 @@ a.login {
     justify-content: space-evenly;
     margin: 0 1em;
     font-size: 200%;
+    cursor: pointer;
 }
 
 .pref-button {
@@ -374,6 +379,7 @@ a.preferences {
     text-decoration: none;
     justify-content: center;
     letter-spacing: 0.7px;
+    cursor: pointer;
 }
 
 .contact-button-container-pref {
@@ -406,57 +412,41 @@ a.preferences {
     padding-left: calc(50%);
 }
 
-.button-icon-user {
-    color: white;
-    /*padding: 16px;*/
-    font-size: 16px;
+.dropbtn {
     border: none;
     cursor: pointer;
 }
 
-.button-icon-user-admin {
-    color: white;
-    /*margin: 1rem 0 1rem 0;*/
-    padding: 1rem 0 1rem 0;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
+.dropdown, .dropdown-admin {
     position: relative;
     display: inline-block;
+}
+
+.dropdown-admin {
+    padding: 1rem 0 2rem 0;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FFEECB;
-    min-width: 90px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 20px;
-    z-index: 101;
-    transform: translateZ(1px);
+    z-index: 1;
 }
 
 .dropdown-content button {
     color: black;
     font-family: 'Dongle';
-    padding: 2px 6px;
     text-decoration: none;
+    border: white;
+    display: block;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.show {
     display: block;
 }
 
-.dropdown-content button:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 20px;
 
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 .psc-user-container {
     display: flex;
@@ -489,6 +479,7 @@ a.draw-button {
     width: 5em;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .draw-description {
@@ -666,7 +657,9 @@ section.list-section {
     color: #4F4537;
     letter-spacing: 0.7px;
     border-radius: 20px;
+    cursor: pointer;
 }
+
 
 .new-list-button {
     width: 160%;
@@ -682,6 +675,7 @@ section.list-section {
     text-decoration: none;
     justify-content: center;
     letter-spacing: 0.7px;
+    cursor: pointer;
 }
 
 .lets-cook-button {
@@ -695,15 +689,15 @@ section.list-section {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
     width: 4.5em;
     margin-bottom: 0.5em;
-    margin: 0 0.5em;
     display: flex;
     text-decoration: none;
     justify-content: center;
+    cursor: pointer;
+
 }
 
 .list-cook-container {
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -725,6 +719,7 @@ section.list-section {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 @media only screen and (max-device-width: 940px) {
@@ -823,6 +818,7 @@ section.list-section {
 
     form.login {
         margin: 0;
+        cursor: pointer;
     }
 
     input {
@@ -973,6 +969,11 @@ section.list-section {
 
     .label-container {
         padding-left: 75px;
+    }
+
+    .back-button-cook {
+        width: 25%;
+        height: 100%;
     }
     
 

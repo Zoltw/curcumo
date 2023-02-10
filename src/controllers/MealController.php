@@ -49,9 +49,9 @@ class MealController extends AppController {
     public function deleteList() {
         $user = $this->userRepository->getUser($_COOKIE['user'], true);
         $this->listRepository->deleteUserList($user->getId());
-        http_response_code(200);
         $this->mealRepository->getAllMeals();
         $this->listRepository->getNumberOfMeals($user->getId());
+        http_response_code(200);
         header("Location: /plan");
     }
 

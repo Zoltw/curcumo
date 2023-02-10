@@ -11,9 +11,7 @@ function addToList() {
 
     fetch(`/mealList/${id}`, {
         method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-    }}).then(function () {
+    }).then(function () {
             plato++;
         });
 }
@@ -23,9 +21,7 @@ function drawMeals() {
         random = Math.floor(Math.random() * 8) + 1;
         fetch(`/mealList/${random}`, {
             method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-        }}).then(function () {
+        }).then(function () {
                 i++;
             });
     }
@@ -33,6 +29,7 @@ function drawMeals() {
 }
 
 function changeOpacityPlateIcon() {
+
     if (plato === 0) {
         plateIcon1.style.opacity = "1";
     }
@@ -53,7 +50,6 @@ function delayWithListRedirect() {
         window.location.href = "/list";
     }, 300);
 }
-
 
 addToListButton.forEach(button => button.addEventListener("click", addToList));
 drawListButton.addEventListener("click", drawMeals);
