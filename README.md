@@ -41,7 +41,7 @@ docker compose up
 
 ## 2. Some screenshots
 
-<p float="center">
+<p>
     <img src="public/img/screenshots/landing-page.png" alt=""/>
     <img src="public/img/screenshots/signup-page.png" alt=""/>
     <img src="public/img/screenshots/choose-preferences.png" alt=""/>
@@ -49,13 +49,13 @@ docker compose up
     <img src="public/img/screenshots/list-page.png" alt=""/>
     <img src="public/img/screenshots/cook-page.png" alt=""/>
 </p>
-<p float="center">
-    <img src="public/img/screenshots/landingpage-mobile.png" alt=""/>
-    <img src="public/img/screenshots/login-mobile.png" alt=""/>
-    <img src="public/img/screenshots/preferences-mobile.png" alt=""/>
-    <img src="public/img/screenshots/plan-mobile.png" alt=""/>
-    <img src="public/img/screenshots/list-mobile.png" alt=""/>
-    <img src="public/img/screenshots/cook-mobile.png" alt=""/>
+<p float="center" grid="">
+    <img src="public/img/screenshots/landingpage-mobile.png" width="250" alt=""/>
+    <img src="public/img/screenshots/login-mobile.png" width="250" alt=""/>
+    <img src="public/img/screenshots/preferences-mobile.png" width="250" alt=""/>
+    <img src="public/img/screenshots/plan-mobile.png" width="250" alt=""/>
+    <img src="public/img/screenshots/list-mobile.png" width="250" alt=""/>
+    <img src="public/img/screenshots/cook-mobile.png" width="250" alt=""/>
 </p>
 
 ## 3. ERD Diagram
