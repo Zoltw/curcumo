@@ -46,6 +46,7 @@ docker compose up
     <img src="public/img/screenshots/signup-page.png" alt=""/>
     <img src="public/img/screenshots/choose-preferences.png" alt=""/>
     <img src="public/img/screenshots/plan-page.png" alt=""/>
+    <img src="public/img/screenshots/meal-page.png" alt=""/>
     <img src="public/img/screenshots/list-page.png" alt=""/>
     <img src="public/img/screenshots/cook-page.png" alt=""/>
 </p>
