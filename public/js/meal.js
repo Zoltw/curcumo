@@ -1,41 +1,41 @@
 const plusIcon = document.querySelector(".plus-icon");
 const minusIcon = document.querySelector(".minus-icon");
-const addToListFromMealButton = document.querySelectorAll(".addButton-meal");
-const servingNumber = document.querySelector(".servings");
+const addToListFromMealButtons = document.querySelectorAll(".addButton-meal");
+const servingNumberElement = document.querySelector(".servings");
 
-i = 1;
+let servings = 1;
+
+function updateServingNumber(value) {
+    servings = Math.max(1, servings + value);
+    servingNumberElement.textContent = servings;
+}
 
 function addServing() {
-    servingNumber.innerHTML = parseInt(servingNumber.innerHTML) + 1;
-    i++;
+    updateServingNumber(1);
 }
 
 function minusServing() {
-    if (servingNumber.innerHTML > 1) {
-        servingNumber.innerHTML = parseInt(servingNumber.innerHTML) - 1;
-        i--;
-    }
+    updateServingNumber(-1);
 }
 
-function addToListFromMeal() {
+async function addToListFromMeal() {
     const mealInList = this;
-    const id = mealInList.getAttribute("id");
+    const mealId = mealInList.getAttribute("id");
 
-    while(i > 0) { 
-        fetch(`/mealList/${id}`, {
+    for (let i = 0; i < servings; i++) {
+        await fetch(`/mealList/${mealId}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
-        }}).then(function () {
-            });
-            i--;
+            }
+        });
     }
+
     setTimeout(() => {
-            window.location.href = "/plan";
-        }, 200
-    );
+        window.location.href = "/plan";
+    }, 200);
 }
 
 plusIcon.addEventListener("click", addServing);
 minusIcon.addEventListener("click", minusServing);
-addToListFromMealButton.forEach(button => button.addEventListener("click", addToListFromMeal));
+addToListFromMealButtons.forEach(button => button.addEventListener("click", addToListFromMeal));
