@@ -1,5 +1,5 @@
 
-function dropDownListLogout() {
+const dropDownListLogout = () => {
     document.getElementById("dropdownUserLogout").classList.toggle("show");
 }
 

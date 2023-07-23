@@ -16,8 +16,8 @@ function addToList() {
         });
 }
 
-function drawMeals() {
-    for(i = 0; i < 3; i++) {
+const drawMeals = () => {
+    for(let i = 0; i < 3; i++) {
         random = Math.floor(Math.random() * 8) + 1;
         fetch(`/mealList/${random}`, {
             method: "POST",
@@ -28,7 +28,7 @@ function drawMeals() {
     delayWithListRedirect();
 }
 
-function changeOpacityPlateIcon() {
+const changeOpacityPlateIcon = () => {
 
     if (plato === 0) {
         plateIcon1.style.opacity = "1";
@@ -41,7 +41,7 @@ function changeOpacityPlateIcon() {
     }
 }
 
-function delayWithListRedirect() {
+const delayWithListRedirect = () => {
     setTimeout(() => {
             const reloadUsingLocationHash = () => {
                 window.location.hash = "reload";

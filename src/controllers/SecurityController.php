@@ -72,8 +72,6 @@ class SecurityController extends AppController {
 
         $this->userRepository->addUser($user);
 
-//        header("Location: http://$_SERVER[HTTP_HOST]/login");
-
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
 }

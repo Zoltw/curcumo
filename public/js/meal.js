@@ -5,20 +5,20 @@ const servingNumberElement = document.querySelector(".servings");
 
 let servings = 1;
 
-function updateServingNumber(value) {
+const updateServingNumber = (value) => {
     servings = Math.max(1, servings + value);
     servingNumberElement.textContent = servings;
 }
 
-function addServing() {
+const addServing = () => {
     updateServingNumber(1);
 }
 
-function minusServing() {
+const minusServing = () => {
     updateServingNumber(-1);
 }
 
-async function addToListFromMeal() {
+const addToListFromMeal = async () => {
     const mealInList = this;
     const mealId = mealInList.getAttribute("id");
 

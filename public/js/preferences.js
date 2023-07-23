@@ -1,6 +1,6 @@
 const prefButton = document.querySelector(".preferences");
 
-function managePref() {
+const managePref = () => {
     const template = document.querySelector("#pref-template")
     document.querySelector(".container").innerHTML="";
     const clone = template.content.cloneNode(true);
@@ -28,7 +28,7 @@ function managePref() {
 
 }
 
-function changeBackground(x) {
+const changeBackground = (x) => {
     if (x.style.background === "rgb(216, 216, 216)") {
         x.style.background = "#FFFFFF";
     }
